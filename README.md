@@ -5,24 +5,6 @@
     <img src="https://www.w3schools.com/howto/img_avatar.png" alt="Jose Luis Lopez" width="150" height="150" style="border-radius: 50%; border: 4px solid #0366d6;" />
     <h1 style="color: #0366d6; font-size: 2.5em; margin: 20px 0 10px 0;">Jose Luis Lopez</h1>
     <h3 style="color: #586069; font-weight: 400; margin: 0 0 20px 0;">Computer Engineering Student | AI & Cybersecurity Enthusiast</h3>
-    
-    <div style="margin: 20px 0;">
-      <a href="https://www.tupaginaweb.com" target="_blank" style="text-decoration: none; margin: 0 10px;">
-        <img src="https://img.icons8.com/color/48/domain.png" alt="Website" width="40" height="40" />
-      </a>
-      <a href="https://www.instagram.com/" target="_blank" style="text-decoration: none; margin: 0 10px;">
-        <img src="https://img.icons8.com/color/48/instagram-new--v1.png" alt="Instagram" width="40" height="40" />
-      </a>
-      <a href="https://www.linkedin.com/" target="_blank" style="text-decoration: none; margin: 0 10px;">
-        <img src="https://img.icons8.com/color/48/linkedin.png" alt="LinkedIn" width="40" height="40" />
-      </a>
-      <a href="mailto:correo@gmail.com" target="_blank" style="text-decoration: none; margin: 0 10px;">
-        <img src="https://img.icons8.com/color/48/gmail-new.png" alt="Gmail" width="40" height="40" />
-      </a>
-      <a href="https://www.youtube.com/" target="_blank" style="text-decoration: none; margin: 0 10px;">
-        <img src="https://img.icons8.com/color/48/youtube-play.png" alt="YouTube" width="40" height="40" />
-      </a>
-    </div>
   </div>
 
   <hr style="margin: 40px auto; border: none; border-top: 2px solid #e1e4e8; width: 80%;" />
