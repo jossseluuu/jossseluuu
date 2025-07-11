@@ -131,6 +131,11 @@
   </p>
 </div>
 -->
+    <p style="color: #586069; font-size: 1.1em; margin-top: 20px;">
+      💡 Currently mastering the fundamentals while exploring advanced concepts in AI and cybersecurity
+    </p>
+  </div>
+
   <hr style="margin: 40px auto; border: none; border-top: 2px solid #e1e4e8; width: 80%;" />
 
   <div align="center">
