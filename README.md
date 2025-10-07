@@ -2,8 +2,19 @@
 # José Luis López
 
 <!-- Main Body [Image & Description] -->
-<img src="images/me.jpeg" alt="José Luis López" style="float: right; width: 200px; margin-left: 20px; margin-bottom: 10px;" />
-
+<table>
+  <tr>
+    <td>
+      Soy un apasionado por la tecnología, el desarrollo de software y los proyectos colaborativos.<br><br>
+      Actualmente estoy trabajando en diversos repositorios que combinan código limpio, buenas prácticas y soluciones innovadoras.<br><br>
+      Aquí encontrarás una selección de mis trabajos, ideas y colaboraciones más recientes.<br><br>
+      ¡Gracias por visitar!
+    </td>
+    <td>
+      <img src="images/me.jpeg" alt="José Luis López" width="200"/>
+    </td>
+  </tr>
+</table>
 Hi there! I'm **José Luis López** - but you can call me **Joselu** 👋.
 I am a Computer Science and Engineering student from **Spain 🇪🇸**.
 
