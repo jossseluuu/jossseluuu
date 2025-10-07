@@ -13,7 +13,7 @@ Beyond the screen, **aviation🛩️ and fitness🏋️‍♂️** keep me inspi
 <!-- Main Body [Social Media] -->
 ### 🌐 **My Social Media**
 
-[![GitHub](icons/github.png)](https://github.com/tuusuario)
+[![GitHub](logos/github.png)](https://github.com/jossseluuu)
 [![LinkedIn](icons/linkedin.png)](https://www.linkedin.com/in/tuusuario/)
 [![Twitter / X](icons/x.png)](https://twitter.com/tuusuario)
 [![Instagram](icons/instagram.png)](https://www.instagram.com/tuusuario/)
