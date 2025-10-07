@@ -2,7 +2,7 @@
 # José Luis López
 
 <!-- Main Body [Image & Description] -->
-<img src="images/me.jpeg" alt="José Luis López" style="float: right; width: 200px; margin-left: 20px;" />
+<img src="images/me.jpeg" alt="José Luis López" style="float: right; width: 200px; margin-right: 20px;" />
 
 Hi there! I'm **José Luis López** - but you can call me **Joselu** 👋.  
 I am a Computer Science and Engineering student from **Spain 🇪🇸**.  
