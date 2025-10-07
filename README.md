@@ -2,8 +2,9 @@
 # José Luis López
 
 <!-- Main Body [Image & Description] -->
-<img src="images/me.jpeg" alt="José Luis López" style="float: right; width: 200px; margin-right: 20px;" />
-
+<p align="right">
+  <img src="images/me.jpeg" width="200" alt="José Luis López" />
+</p>
 Hi there! I'm **José Luis López** - but you can call me **Joselu** 👋.  
 I am a Computer Science and Engineering student from **Spain 🇪🇸**.  
 Passionate about **Artificial Intelligence**🤖 and **Cybersecurity**🔒, always looking for ways to connect creativity with technology💻. Currently exploring **Web and App Development**, and constantly learning **through projects and hackathons**💼. Driven by curiosity and continuous learning, I enjoy tackling challenges that bring together software, data, security and others.  
