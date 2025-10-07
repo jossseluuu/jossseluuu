@@ -4,9 +4,10 @@
 <!-- Main Body [Image & Description] -->
 <img src="images/me.jpeg" alt="José Luis López" style="float: right; width: 200px; margin-left: 20px;" />
 
-Hi there! I'm **José Luis López** - but you can call me **Joselu** 👋. 
-I am a Computer Science and Engineering student from **Spain 🇪🇸**. Passionate about **Artificial Intelligence**🤖 and **Cybersecurity**🔒, always looking for ways to connect creativity with technology💻. Currently exploring **Web and App Development**, and constantly learning **through projects and hackathons**💼. Driven by curiosity and continuous learning, I enjoy tackling challenges that bring together software, data, security and others. 
-Beyond the screen, **aviation🛩️ and fitness🏋️‍♂️** keep me inspired and motivated.
+Hi there! I'm **José Luis López** - but you can call me **Joselu** 👋.  
+I am a Computer Science and Engineering student from **Spain 🇪🇸**.  
+Passionate about **Artificial Intelligence**🤖 and **Cybersecurity**🔒, always looking for ways to connect creativity with technology💻. Currently exploring **Web and App Development**, and constantly learning **through projects and hackathons**💼. Driven by curiosity and continuous learning, I enjoy tackling challenges that bring together software, data, security and others.  
+Beyond the screen, **aviation🛩️ and fitness🏋️‍♂️** keep me inspired and motivated.  
 
 <!-- Main Body [Social Media] -->
 ### 🌐 **My Social Media**
