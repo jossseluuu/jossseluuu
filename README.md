@@ -97,16 +97,6 @@
 
 </div>
 
-## 📊 **GitHub Statistics** | **Estadísticas de GitHub**
-
-<div align="center">
-  
-<img width="49%" src="https://github-readme-streak-stats.herokuapp.com/?user=jossseluuu&theme=dark&hide_border=true&background=000000&ring=888888&fire=888888&currStreakLabel=FFFFFF&sideLabels=FFFFFF&currStreakNum=FFFFFF&dates=AAAAAA&sideNums=AAAAAA" alt="GitHub Streak" />
-
-<img width="49%" src="https://github-readme-activity-graph.vercel.app/graph?username=jossseluuu&theme=github-dark&hide_border=true&bg_color=000000&color=888888&line=888888&point=FFFFFF&area=true&area_color=888888" alt="Activity Graph" />
-
-</div>
-
 ## 🌐 **Connect with me** | **Conéctate conmigo**
 
 <p align="center">
