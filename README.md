@@ -20,14 +20,14 @@
 
 ```ascii
 ----------------------------------------------------------------------------------------------------------------------------------------
- > who am i
+ > Who am I
   👋Hi!
   I'm José Luis López, an aspiring Computer Science driven by curiosity and a commitment to building robust, intelligent, and secure systems. I thrive on continuous learning and impactful projects.
 
   👋Hola!
   Soy José Luis López, un estudiante de Ingenieria Informática. Tengo bastante motivación y curiosidad por crear sistemas robustos, inteligentes y seguros. Me encanta aprender de forma autónoma y contínua, así como sobre los proyectos de impacto.
 
- > location
+ > Location
   🌍I'm Mobile!
   I'm now in Missoula, Montana, USA, attending at the University of Montana on an Exchange Program. My home is Granada, Spain.
   I'm an aid traveler and genuinely passionate about new things. I am actively looking for opportunities worldwide and am highly willing to relocate to join and exciting experience or project, embrace new work methodologies, and apply my skills and knowledges in a truly international setting.
@@ -36,7 +36,7 @@
   Actualmente me encuentro en Missoula, Montana, USA, cursnaod un programa de intercambio en la University of Montana. Mi verdadero hogar es Granada, España.
   Soy un apasionado de los viajes y siempre estoy dispuesto a moverme por el mundo para explorar nuevas cosas y aplicar mis conocimientos en diferentes entornos, trabajar y conocer nuevas metodologías, así como aplicar mis conocimientos en entornos diversos. Actualmente estoy abierto a oportunidades globales que me permitan crecer tanto profesional como personalmente.
 
- > education
+ > Education
   📚 Computer Science & Engineering - 3rd Year
    | > Universidad de Granada (UGR): My primary source of prestigious knowledge, establishing the solid conceptual and fundamental bases for my career as an Computer Science & Engineer Student.
    | > University of Montana (UM): Key experience abroad. An exchange program that has provided a different view of technology and the acquisition of essential skills from a new perspective.
@@ -45,7 +45,7 @@
    | > Universidad de Granada (UGR): Mi principal fuente de conocimiento de prestigio, sentando las bases conceptuales sólidas y fundamentales para mi carrera como estudiante de Ingeniería Informática.
    | > University of Montana (UM): Experiencia clave en el extranjero. Un programa de intercambio que me ha aportado una visión diferente de la tecnología y la adquisición de habilidades esenciales desde una nueva perspectiva.
 
- > interests
+ > Interests
   I focus on high-impact technological fields and personal growth:
   🤖 Artificial Intelligence: Exploring Machine Learning and data-driven solutions.
   🔒 Cybersecurity: Dedicated to system defence, ethical hacking, and vulnerability analysis.
