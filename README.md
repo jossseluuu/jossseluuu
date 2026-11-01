@@ -5,7 +5,7 @@
 # Hi, I'm José Luis López 👋
 
 <a href="https://github.com/jossseluuu">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&size=20&pause=1000&color=58A6FF&center=true&vCenter=true&width=640&lines=Final-year+Computer+Science+%26+Engineering+student;Building+AgentHQ%3A+an+AI+company+run+by+agents;Backend+%E2%80%A2+Applied+AI+%E2%80%A2+Security;Open+to+internships+and+junior+roles+worldwide+%F0%9F%8C%8D" alt="Typing SVG" />
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&size=20&pause=1000&color=58A6FF&center=true&vCenter=true&width=640&lines=Final-Year+Computer+Science+%26+Engineering+Student;Building+AgentHQ%3A+an+AI+company+run+by+agents;Backend+%E2%80%A2+Applied+AI+%E2%80%A2+Security;Open+to+internships+and+junior+roles+worldwide+%F0%9F%8C%8D" alt="Typing SVG" />
 </a>
 
 <p>
