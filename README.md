@@ -14,7 +14,7 @@
   <a href="https://www.instagram.com/jossseluuu"><img src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white" alt="Instagram"></a>
 </p>
 
-<sub><b>EN</b> English · <b>ES</b> <a href="#es">Versión en español</a></sub>
+<sub>🇬🇧 English · 🇪🇸 <a href="#-versión-en-español">Versión en español</a></sub>
 
 </div>
 
@@ -87,7 +87,7 @@ I do my best work in teams that build **backend systems, AI products or security
 ---
 
 ### 📡 [HowThingsTalk](https://github.com/jossseluuu/HowThingsTalk) · How everyday devices really work
-<sub>Technical writing · ES / EN · new article every weekday</sub>
+<sub>Technical writing · 🇪🇸 / 🇬🇧 · new article every weekday</sub>
 
 **What it is.** A growing library that explains **how the devices we use every day work underneath**: phones, laptops, earbuds, watches, speakers, cards, light bulbs and cars. Each article answers **one concrete question**, in Spanish and English.
 
@@ -161,9 +161,7 @@ It's timeless on purpose: no news, no reviews, no buying advice. What's explaine
 
 ---
 
-<a id="es"></a>
-
-## 🌐 Versión en español (ES)
+## 🇪🇸 Versión en español
 
 <details>
 <summary><b>Haz clic para leer mi perfil completo en español</b></summary>
