@@ -1,10 +1,7 @@
 <div align="center">
 
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/banner-dark.png">
-  <source media="(prefers-color-scheme: light)" srcset="assets/banner-light.png">
-  <img src="assets/banner-dark.png" alt="José Luis López" width="100%">
-</picture>
+<img src="assets/banner-dark.png#gh-dark-mode-only" alt="José Luis López" width="100%">
+<img src="assets/banner-light.png#gh-light-mode-only" alt="José Luis López" width="100%">
 
 # Hi, I'm José Luis López 👋
 
@@ -202,33 +199,21 @@ Tracks an investment portfolio in one place: holdings, real-time prices, perform
 
 <div align="center">
 
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="./profile-summary-card-output/github_dark/0-profile-details.svg">
-  <img src="./profile-summary-card-output/github/0-profile-details.svg" alt="Contributions over time" width="100%">
-</picture>
+<img src="./profile-summary-card-output/github_dark/0-profile-details.svg#gh-dark-mode-only" alt="Contributions over time" width="100%">
+<img src="./profile-summary-card-output/github/0-profile-details.svg#gh-light-mode-only" alt="Contributions over time" width="100%">
 
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="./profile-summary-card-output/github_dark/3-stats.svg">
-  <img src="./profile-summary-card-output/github/3-stats.svg" alt="GitHub stats" width="49%">
-</picture>
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="./profile-summary-card-output/github_dark/4-productive-time.svg">
-  <img src="./profile-summary-card-output/github/4-productive-time.svg" alt="Commits by time of day" width="49%">
-</picture>
+<img src="./profile-summary-card-output/github_dark/3-stats.svg#gh-dark-mode-only" alt="GitHub stats" width="49%">
+<img src="./profile-summary-card-output/github/3-stats.svg#gh-light-mode-only" alt="GitHub stats" width="49%">
+<img src="./profile-summary-card-output/github_dark/4-productive-time.svg#gh-dark-mode-only" alt="Commits by time of day" width="49%">
+<img src="./profile-summary-card-output/github/4-productive-time.svg#gh-light-mode-only" alt="Commits by time of day" width="49%">
 
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="./profile-summary-card-output/github_dark/2-most-commit-language.svg">
-  <img src="./profile-summary-card-output/github/2-most-commit-language.svg" alt="Most committed languages" width="49%">
-</picture>
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="./profile-summary-card-output/github_dark/1-repos-per-language.svg">
-  <img src="./profile-summary-card-output/github/1-repos-per-language.svg" alt="Repositories per language" width="49%">
-</picture>
+<img src="./profile-summary-card-output/github_dark/2-most-commit-language.svg#gh-dark-mode-only" alt="Most committed languages" width="49%">
+<img src="./profile-summary-card-output/github/2-most-commit-language.svg#gh-light-mode-only" alt="Most committed languages" width="49%">
+<img src="./profile-summary-card-output/github_dark/1-repos-per-language.svg#gh-dark-mode-only" alt="Repositories per language" width="49%">
+<img src="./profile-summary-card-output/github/1-repos-per-language.svg#gh-light-mode-only" alt="Repositories per language" width="49%">
 
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/jossseluuu/jossseluuu/output/github-snake-dark.svg">
-  <img src="https://raw.githubusercontent.com/jossseluuu/jossseluuu/output/github-snake.svg" alt="Contribution graph being eaten by a snake" width="100%">
-</picture>
+<img src="https://raw.githubusercontent.com/jossseluuu/jossseluuu/output/github-snake-dark.svg#gh-dark-mode-only" alt="Contribution graph being eaten by a snake" width="100%">
+<img src="https://raw.githubusercontent.com/jossseluuu/jossseluuu/output/github-snake.svg#gh-light-mode-only" alt="Contribution graph being eaten by a snake" width="100%">
 
 </div>
 
