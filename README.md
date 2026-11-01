@@ -63,8 +63,6 @@ You give a goal to a **CEO agent**; it plans it, delegates it to departments, su
 • **RAG knowledge bases** per company, department, room or agent, with source citations<br>
 • **Hash-chained audit log**, an independent **Auditor agent** and **per-agent AI budgets**
 
-<a href="https://github.com/jossseluuu/CompanyAgentsHQ"><img src="https://raw.githubusercontent.com/jossseluuu/CompanyAgentsHQ/HEAD/docs/media/preview.gif" alt="CompanyAgentsHQ preview" width="100%"></a>
-
 <details>
 <summary><b>How it works</b></summary>
 <br>
@@ -93,8 +91,6 @@ On top of the open-source **openScope** ATC simulator, I built **two AI bots tha
 • **Bot B**: **reinforcement learning (PPO)** in PyTorch with curriculum learning, pre-trained by **imitating Bot A (DAgger)**, exported to **ONNX** to run in the browser<br>
 • Both are bound by real **ICAO, EASA (RECAT-EU) and FAA rules** and a shared **safety shield**
 
-<a href="https://github.com/jossseluuu/openScope"><img src="https://raw.githubusercontent.com/jossseluuu/openScope/HEAD/docs/media/preview.gif" alt="openScope AI bots preview" width="100%"></a>
-
 <details>
 <summary><b>How it works</b></summary>
 <br>
@@ -120,8 +116,6 @@ Hides a text or a whole file inside an image so that, **without the password, it
 • **Three hiding domains**: pixel bits (PNG, BMP…), **JPEG DCT coefficients** without recompression and **GIF palette indices**<br>
 • **Argon2id + XChaCha20-Poly1305**, with password-derived positions and an **encrypted header**<br>
 • **Built-in steganalysis** (chi-square, RS analysis) and distortion metrics (PSNR, SSIM)
-
-<a href="https://github.com/jossseluuu/I-CPU"><img src="https://raw.githubusercontent.com/jossseluuu/I-CPU/HEAD/docs/media/preview.png" alt="I-CPU preview" width="100%"></a>
 
 <details>
 <summary><b>How it works</b></summary>
@@ -169,8 +163,6 @@ Tracks an investment portfolio in one place: holdings, real-time prices, perform
 • **Real-time prices** and **multi-currency** support with live exchange rates and a fallback provider<br>
 • **Per-asset market data**: fundamentals, analyst ratings, earnings with EPS surprises, dividends and news<br>
 • **Background jobs**, CSV import/export and optional **weekly Telegram alerts**
-
-<a href="https://github.com/jossseluuu/InvestDashboard"><img src="https://raw.githubusercontent.com/jossseluuu/InvestDashboard/HEAD/docs/media/preview.png" alt="InvestDashboard preview" width="100%"></a>
 
 <details>
 <summary><b>More details</b></summary>
