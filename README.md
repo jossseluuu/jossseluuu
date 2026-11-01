@@ -6,7 +6,7 @@
 # Hi, I'm José Luis López 👋
 
 <a href="https://github.com/jossseluuu">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&size=20&pause=1200&color=58A6FF&center=true&vCenter=true&width=660&lines=Final-year+Computer+Science+%26+Engineering+student;Backend+%C2%B7+Applied+AI+%C2%B7+Security;Building+multi-agent+systems+and+AI+air+traffic+controllers;Explaining+how+everyday+tech+really+works" alt="Final-year Computer Science & Engineering student · Backend · Applied AI · Security" />
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&size=22&duration=3000&pause=1200&color=58A6FF&center=true&vCenter=true&width=560&height=50&lines=Final-year+CS+%26+Engineering+student;Backend+%C2%B7+Applied+AI+%C2%B7+Security;Building+AI+agents+that+run+a+company;Training+AI+air+traffic+controllers;Hiding+encrypted+data+inside+images;Explaining+how+everyday+tech+works" alt="Final-year CS &amp; Engineering student · Backend · Applied AI · Security" />
 </a>
 
 <p>
@@ -52,132 +52,206 @@ I build software that is **useful, secure and easy to reason about**, and I like
 
 ## 🚀 Featured Projects
 
-### 🏢 [CompanyAgentsHQ](https://github.com/jossseluuu/CompanyAgentsHQ) · AI agents as a real company
-<sub>Personal project · 🚧 in active development</sub>
-
-You give a goal to a **CEO agent**; it plans it, delegates it to departments, supervisors review the work and everything ends up archived, all inside a **2.5D isometric office** where you can watch the agents work.<br>
-• **Real org chart** with supervision, escalation and an **approval inbox** for sensitive actions<br>
-• **RAG knowledge bases** per company, department, room or agent, with source citations<br>
-• **Hash-chained audit log**, an independent **Auditor agent** and **per-agent AI budgets**
-
-<details>
-<summary><b>How it works</b></summary>
-<br>
-
-**The problem.** Multi-agent AI systems are usually black boxes: they're configured in code, followed through logs, and it's hard to tell who did what, where each document ended up and how much it cost.
-
-**The idea.** CompanyAgentsHQ turns them into a company you can see. 8 agents (CEO, Chief of Staff, CMO, CTO, CFO, two specialists and an Auditor) work in configurable rooms, each with its own modules: file cabinet, task board, finance dashboard, rest area… Agents walk between rooms (A* pathfinding) according to what they're doing.<br>
-• **Supervision rules** per relationship and action type: result review, prior approval and escalation to the owner<br>
-• **Append-only audit log** where each event includes the hash of the previous one; the Auditor flags unusual spending, loops and repeated permission denials, and can pause an agent<br>
-• **Daily AI spending cap** that stops work when it's reached, and a fake LLM mode to develop and test at zero cost<br>
-• **Modular monolith**: room modules are plugins; agent work runs in a separate worker over Redis and streams to the browser via WebSockets<br>
-• **Swappable LLM provider** behind its own interface (Claude, OpenAI or local models via Ollama)<br>
-• Designed from a full specification: **160+ functional and 60+ non-functional requirements**, all measurable
-
-</details>
-
-<img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white"> <img src="https://img.shields.io/badge/FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white"> <img src="https://img.shields.io/badge/React-20232A?style=flat-square&logo=react&logoColor=61DAFB"> <img src="https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white"> <img src="https://img.shields.io/badge/Three.js_/_R3F-000000?style=flat-square&logo=threedotjs&logoColor=white"> <img src="https://img.shields.io/badge/PostgreSQL_+_pgvector-4169E1?style=flat-square&logo=postgresql&logoColor=white"> <img src="https://img.shields.io/badge/Redis-DC382D?style=flat-square&logo=redis&logoColor=white"> <img src="https://img.shields.io/badge/Claude_API-D97757?style=flat-square&logo=anthropic&logoColor=white"> <img src="https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white">
+| | Project | In one line | Area | Status |
+|:-:|---|---|---|---|
+| 🏢 | **[CompanyAgentsHQ](https://github.com/jossseluuu/CompanyAgentsHQ)** | A company of AI agents you run from a live isometric office | Multi-agent AI · Full-stack | 🚧 In development |
+| 🛫 | **[openScope](https://github.com/jossseluuu/openScope)** | AI bots that control all the air traffic of an airport | Reinforcement learning · Optimisation | 🧪 Bot A ready · Bot B training |
+| 🔐 | **[I-CPU](https://github.com/jossseluuu/I-CPU)** | Hide data in images that can't be read or even detected | Cryptography · Security | ✅ Stable |
+| 📡 | **[HowThingsTalk](https://github.com/jossseluuu/HowThingsTalk)** | How everyday devices really work, from analogy to physics | Technical writing · Hardware | 📝 New article every weekday |
+| 📈 | **[InvestDashboard](https://github.com/jossseluuu/InvestDashboard)** | Real-time investment portfolio tracker | Full-stack · Finance | ✅ Deployment-ready |
 
 ---
 
-### 🛫 [openScope](https://github.com/jossseluuu/openScope) · AI air traffic controllers
-<sub>Open-source fork · JavaScript + Python</sub>
+### 🏢 [CompanyAgentsHQ](https://github.com/jossseluuu/CompanyAgentsHQ)
 
-On top of the open-source **openScope** ATC simulator, I built **two AI bots that control all the traffic of an airport**, arrivals, departures and conflicts, using only the same commands a human controller would give.<br>
-• **Bot A**: expert rules + optimisation: arrival/departure sequencing (AMAN/DMAN), vectors, holds and conflict resolution, with parameters tuned by **CMA-ES**<br>
-• **Bot B**: **reinforcement learning (PPO)** in PyTorch with curriculum learning, pre-trained by **imitating Bot A (DAgger)**, exported to **ONNX** to run in the browser<br>
-• Both are bound by real **ICAO, EASA (RECAT-EU) and FAA rules** and a shared **safety shield**
+**A company made of AI agents that you run from a live isometric office.**<br>
+<img src="https://img.shields.io/badge/status-in_development-F59E0B?style=flat-square"> <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white"> <img src="https://img.shields.io/badge/FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white"> <img src="https://img.shields.io/badge/React-20232A?style=flat-square&logo=react&logoColor=61DAFB"> <img src="https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white"> <img src="https://img.shields.io/badge/Three.js_/_R3F-000000?style=flat-square&logo=threedotjs&logoColor=white"> <img src="https://img.shields.io/badge/PostgreSQL_+_pgvector-4169E1?style=flat-square&logo=postgresql&logoColor=white"> <img src="https://img.shields.io/badge/Redis-DC382D?style=flat-square&logo=redis&logoColor=white"> <img src="https://img.shields.io/badge/Claude_API-D97757?style=flat-square&logo=anthropic&logoColor=white"> <img src="https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white">
+
+> You give a goal to the **CEO agent**. It turns it into a plan, delegates it to its departments, managers review their team's work before it reaches you, and every result is archived and searchable, while you watch the agents walk between rooms as they work.
+
+**Highlights**<br>
+• **A real org chart, not a pipeline**: managers, supervisors, escalation rules and an **approval inbox** where you sign off sensitive actions<br>
+• **Knowledge with scope**: RAG bases per company, department, room or agent, with every answer citing its sources<br>
+• **Accountable by design**: a hash-chained audit log, an independent **Auditor agent** that can pause others, and **AI budgets per agent**
+
+**By the numbers** · `8 agents` · `12 room modules` · `161 functional requirements` · `66 measurable non-functional requirements`
 
 <details>
-<summary><b>How it works</b></summary>
+<summary><b>Deep dive</b>: problem, architecture and engineering</summary>
 <br>
 
-- **Headless simulator** that runs the game without a browser, with seeded randomness, a **Bot API** and a **Python bridge** exposed as a **Gymnasium-style environment**
-- **Operational realism layer**: regulatory profiles per airport, wake turbulence separation, runway wind limits, terrain clearance and taxi times, with rules ranked by priority (safety → separation → procedure → efficiency)
-- **Explainable decisions**: every command Bot A gives comes with its reason
-- **Audit page** that records each game step by step and exports it to train Bot B
-- **New airports**: Madrid-Barajas (**LEMD**) and Málaga (**LEMG**), with terrain data and airport guides
-- In the game, type `bot a`, `bot b` or `bot off` to hand over or take back control
-- Unit tests for the bots, the safety shield and the realism rules; Bot B's full training run is the next step
+**The problem**<br>
+Multi-agent AI systems are usually black boxes: they're configured in code, followed through logs, and it's hard to tell who did what, where each document ended up and how much it cost.
+
+**The approach**<br>
+Make the company visible. Agents (CEO, Chief of Staff, CMO, CTO, CFO, two specialists and an Auditor) work in configurable rooms, and each room installs its own modules: file cabinet, task board, knowledge base, finance dashboard, rest area, audit panel… Where an agent is shows what it's doing: working at its desk, reading at the file cabinet, meeting in the boardroom, or consolidating its memory in the rest area.
+
+**Architecture**<br>
+• **Modular monolith** with clear domains (agents, rooms, tasks, knowledge, files, approvals, audit, finance), each with its own public interface<br>
+• **Room modules are plugins**: each one adds furniture to the map, a tab in the UI and tools for the agents in that room<br>
+• **Agent work runs in a separate worker**: the API queues tasks in Redis and streams events to the browser over WebSockets, so long tasks never block the UI and survive restarts<br>
+• **PostgreSQL + pgvector** for data and embeddings in one place, **MinIO/S3** for files<br>
+• **Swappable LLM provider** behind its own interface: Claude, OpenAI or local models via Ollama
+
+**Safety and cost control**<br>
+• Supervision per relationship and action type: result review, prior approval and escalation to the owner<br>
+• Append-only audit events, each including the hash of the previous one; the Auditor flags unusual spending, loops and repeated permission denials<br>
+• Least privilege: every tool and knowledge base must be enabled explicitly, and file or web content is treated as data, never as instructions<br>
+• A daily AI spending cap that stops work when reached, and a **fake LLM mode** to develop and test at zero cost
+
+**Engineering standards**<br>
+Written specification with prioritised requirements (MoSCoW), ADRs for every architecture decision, strict linting and typing (ruff, mypy, eslint, tsc), test coverage targets, CI required to merge and a one-command setup with Docker Compose.
+
+**Next milestone**<br>
+MVP: give a goal to the CEO and watch it be planned, delegated, executed and archived, entirely from the isometric office.
 
 </details>
 
-<img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black"> <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white"> <img src="https://img.shields.io/badge/PyTorch-EE4C2C?style=flat-square&logo=pytorch&logoColor=white"> <img src="https://img.shields.io/badge/ONNX-005CED?style=flat-square&logo=onnx&logoColor=white"> <img src="https://img.shields.io/badge/Reinforcement_learning_(PPO)-6E40C9?style=flat-square"> <img src="https://img.shields.io/badge/CMA--ES-6E40C9?style=flat-square"> <img src="https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=nodedotjs&logoColor=white">
-
 ---
 
-### 🔐 [I-CPU](https://github.com/jossseluuu/I-CPU) · Encrypted steganography
-<sub>Applied cryptography · C++20</sub>
+### 🛫 [openScope](https://github.com/jossseluuu/openScope)
 
-Hides a text or a whole file inside an image so that, **without the password, it can't be read or even proven to exist**, and then measures how detectable the result is.<br>
-• **Three hiding domains**: pixel bits (PNG, BMP…), **JPEG DCT coefficients** without recompression and **GIF palette indices**<br>
-• **Argon2id + XChaCha20-Poly1305**, with password-derived positions and an **encrypted header**<br>
-• **Built-in steganalysis** (chi-square, RS analysis) and distortion metrics (PSNR, SSIM)
+**Two AI air traffic controllers that run a whole airport, built on top of an open-source ATC simulator.**<br>
+<img src="https://img.shields.io/badge/status-Bot_A_ready_·_Bot_B_training-8B5CF6?style=flat-square"> <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black"> <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white"> <img src="https://img.shields.io/badge/PyTorch-EE4C2C?style=flat-square&logo=pytorch&logoColor=white"> <img src="https://img.shields.io/badge/ONNX-005CED?style=flat-square&logo=onnx&logoColor=white"> <img src="https://img.shields.io/badge/Reinforcement_learning_(PPO)-6E40C9?style=flat-square"> <img src="https://img.shields.io/badge/CMA--ES-6E40C9?style=flat-square"> <img src="https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=nodedotjs&logoColor=white">
+
+> Arrivals, departures and conflicts: the bots handle all of it using **only the commands a human controller would give**, through the same command line, under real aviation rules.
+
+**Highlights**<br>
+• **Bot A, expert rules + optimisation**: arrival and departure sequencing (AMAN/DMAN), vectors, holds and conflict resolution, with its parameters tuned by **CMA-ES**, and a reason attached to every command<br>
+• **Bot B, reinforcement learning**: **PPO** in PyTorch with curriculum learning, pre-trained by **imitating Bot A (DAgger)** and exported to **ONNX** to play in the browser<br>
+• **Real regulations**: both bots obey **ICAO, EASA (RECAT-EU) and FAA** separation rules and share a **safety shield** that blocks unsafe commands
+
+**By the numbers** · `2 AI controllers` · `3 regulatory profiles` · `10 operational rules in 4 priority tiers` · `2 new airports` · `17 new test files`
 
 <details>
-<summary><b>How it works</b></summary>
+<summary><b>Deep dive</b>: simulator, realism and training pipeline</summary>
 <br>
 
-- It picks the hiding technique based on the output format, encrypts everything before writing it, and leaves nothing recognisable in the image: without the password there's no header, no signature and no pattern to look for
-- Animated GIFs are supported in the palette domain, and JPEG images keep their original compression
-- Steganalysis (chi-square, RS analysis, DCT chi-square) lets you compare configurations with real numbers instead of guessing
-- **Two interfaces**: a CLI with a guided mode, and an **offline local web GUI** with a before/after slider, difference view, pixel magnifier and live capacity meter
-- **Engineering**: CMake presets, automated tests, CI and architecture decision records (ADRs)
+**Headless simulator**<br>
+The game runs without a browser, with seeded randomness for reproducible runs, a **Bot API** and a **Python bridge** exposed as a **Gymnasium-style environment** for training.
+
+**Operational realism layer**<br>
+• Regulatory profile per airport (EASA, FAA or ICAO) chosen from its ICAO code<br>
+• Wake turbulence separation for arrivals and departures, runway wind limits, terrain clearance, minimum vectoring altitudes and taxi times<br>
+• Rules ranked by priority, **safety → separation → procedure → efficiency**: no efficiency gain can make up for a safety violation
+
+**Training pipeline**<br>
+Bot A plays → every decision is recorded on an **audit page** and exported → Bot B learns to imitate it (DAgger) → then improves with PPO under a curriculum, always behind the same safety shield.
+
+**New airports**<br>
+**Madrid-Barajas (LEMD)** and **Málaga (LEMG)**, with procedures, terrain data and airport guides.
+
+**Try it**<br>
+In the game, type `bot a`, `bot b` or `bot off` to hand over control or take it back.
+
+**Next milestone**<br>
+Bot B's full training run and a head-to-head comparison against Bot A.
 
 </details>
 
-<img src="https://img.shields.io/badge/C++20-00599C?style=flat-square&logo=cplusplus&logoColor=white"> <img src="https://img.shields.io/badge/CMake-064F8C?style=flat-square&logo=cmake&logoColor=white"> <img src="https://img.shields.io/badge/Argon2id_·_XChaCha20--Poly1305-000000?style=flat-square&logo=letsencrypt&logoColor=white"> <img src="https://img.shields.io/badge/GitHub_Actions-2088FF?style=flat-square&logo=githubactions&logoColor=white">
+---
+
+### 🔐 [I-CPU](https://github.com/jossseluuu/I-CPU)
+
+**Hide a message or a whole file inside an image so that, without the password, it can't be read or even proven to exist.**<br>
+<img src="https://img.shields.io/badge/status-stable-22C55E?style=flat-square"> <img src="https://img.shields.io/badge/C++20-00599C?style=flat-square&logo=cplusplus&logoColor=white"> <img src="https://img.shields.io/badge/CMake-064F8C?style=flat-square&logo=cmake&logoColor=white"> <img src="https://img.shields.io/badge/Argon2id_·_XChaCha20--Poly1305-000000?style=flat-square&logo=letsencrypt&logoColor=white"> <img src="https://img.shields.io/badge/GitHub_Actions-2088FF?style=flat-square&logo=githubactions&logoColor=white">
+
+> Most steganography tools stop at hiding the data. I-CPU also **attacks its own output** with real steganalysis, so you can see how detectable each configuration is with numbers instead of guesses.
+
+**Highlights**<br>
+• **Three hiding domains**: pixel bits (PNG, BMP, TGA, QOI, PNM), **JPEG DCT coefficients** without recompressing the image, and **GIF palette indices**, animated GIFs included<br>
+• **Modern cryptography**: Argon2id key derivation + XChaCha20-Poly1305 authenticated encryption; embedding positions come from the password and even the **header is encrypted**<br>
+• **Built-in steganalysis** (chi-square, RS analysis, DCT chi-square) and distortion metrics (PSNR, SSIM)
+
+**By the numbers** · `3 hiding domains` · `7 image formats` · `3 steganalysis tests` · `2 interfaces`
+
+<details>
+<summary><b>Deep dive</b>: design, interfaces and engineering</summary>
+<br>
+
+**Design**<br>
+It picks the hiding technique from the output format and encrypts everything before writing it. Since positions and header depend on the password, nothing recognisable is left in the image: no signature, no header, no pattern to look for.
+
+**Interfaces**<br>
+• **CLI** with a guided mode: run it without arguments and it asks step by step, and you can drag images into the console<br>
+• **Offline local web GUI**: before/after slider, difference view, pixel magnifier, live capacity meter, password strength meter and generator, and an experiment mode with exportable charts
+
+**Engineering**<br>
+CMake presets, automated tests, CI, architecture decision records (ADRs) and a single-command build script on Windows; also builds on Linux.
+
+</details>
 
 ---
 
-### 📡 [HowThingsTalk](https://github.com/jossseluuu/HowThingsTalk) · How everyday devices really work
-<sub>Technical writing · ES / EN · new article every weekday</sub>
+### 📡 [HowThingsTalk](https://github.com/jossseluuu/HowThingsTalk)
 
-A growing library that explains **how the devices we use every day work underneath**: phones, laptops, earbuds, watches, speakers, cards, light bulbs and cars. Each article answers **one concrete question**, in Spanish and English.<br>
-• **Four layers of depth** per article, so beginners can stop early and experts can go all the way down<br>
-• From an everyday analogy (and exactly where it breaks) to protocols, data frames, radio spectrum and real physical numbers<br>
-• Timeless on purpose: no news, no reviews, no buying advice
+**A bilingual library on how the devices we use every day really work underneath.**<br>
+<img src="https://img.shields.io/badge/new_article-every_weekday-0EA5E9?style=flat-square"> <img src="https://img.shields.io/badge/ES_/_EN-bilingual-0A66C2?style=flat-square"> <img src="https://img.shields.io/badge/Markdown-000000?style=flat-square&logo=markdown&logoColor=white"> <img src="https://img.shields.io/badge/Networking_·_Radio_·_Hardware-6E40C9?style=flat-square">
+
+> Each article answers **one concrete question** about phones, laptops, earbuds, watches, speakers, cards, light bulbs or cars, with the rigour an expert expects and the clarity a beginner needs.
+
+**Highlights**<br>
+• **Four layers of depth**: readers can stop at the core idea or go all the way down to the physics<br>
+• **From analogy to mechanism**: an everyday mental model, the exact point where it breaks, then protocols, data frames, radio spectrum and real numbers<br>
+• **Timeless on purpose**: no news, no reviews, no buying advice; what's explained should still hold in five years
+
+**By the numbers** · `8 device families` · `4 depth layers` · `2 languages` · `5 new articles a week`
 
 <details>
-<summary><b>The four layers</b></summary>
+<summary><b>Deep dive</b>: how each article is built</summary>
 <br>
 
-1. **The question and the depth** it requires, plus the prior knowledge needed
-2. **The short answer**: one sentence plus a 60-second summary
-3. **The mental model**: an everyday analogy, and the exact point where it breaks
+1. **The question and its depth**: the exact question, the technical level and the prior knowledge needed<br>
+2. **The short answer**: one sentence, plus a 60-second summary<br>
+3. **The mental model**: an everyday analogy, and where it stops being true<br>
 4. **The technical mechanism**: flow diagrams, data frames, protocols, radio spectrum and the real physical numbers
 
-</details>
+Every article exists in Spanish and English with the same structure, and the project follows its own style guide, glossary and roadmap.
 
-<img src="https://img.shields.io/badge/Markdown-000000?style=flat-square&logo=markdown&logoColor=white"> <img src="https://img.shields.io/badge/Technical_writing-6E40C9?style=flat-square"> <img src="https://img.shields.io/badge/Networking_·_Radio_·_Hardware-0A66C2?style=flat-square">
+</details>
 
 ---
 
-### 📈 [InvestDashboard](https://github.com/jossseluuu/InvestDashboard) · Personal investment dashboard
-<sub>Full-stack · Flask + React</sub>
+### 📈 [InvestDashboard](https://github.com/jossseluuu/InvestDashboard)
 
-Tracks an investment portfolio in one place: holdings, real-time prices, performance over time and market news.<br>
-• **Real-time prices** and **multi-currency** support with live exchange rates and a fallback provider<br>
-• **Per-asset market data**: fundamentals, analyst ratings, earnings with EPS surprises, dividends and news<br>
-• **Background jobs**, CSV import/export and optional **weekly Telegram alerts**
+**All of an investment portfolio in one place: live prices, performance, fundamentals and news.**<br>
+<img src="https://img.shields.io/badge/status-deployment--ready-22C55E?style=flat-square"> <img src="https://img.shields.io/badge/Flask-000000?style=flat-square&logo=flask&logoColor=white"> <img src="https://img.shields.io/badge/React-20232A?style=flat-square&logo=react&logoColor=61DAFB"> <img src="https://img.shields.io/badge/Vite-646CFF?style=flat-square&logo=vite&logoColor=white"> <img src="https://img.shields.io/badge/SQLite-003B57?style=flat-square&logo=sqlite&logoColor=white"> <img src="https://img.shields.io/badge/Chart.js-FF6384?style=flat-square&logo=chartdotjs&logoColor=white">
+
+> A full-stack app that pulls market data from several providers, normalises it into one currency of your choice and keeps it updated in the background.
+
+**Highlights**<br>
+• **Live prices in your currency**: 7 currencies with live exchange rates and an automatic fallback provider<br>
+• **Research per asset**: fundamentals, analyst ratings and price targets, earnings with EPS surprises, dividend history and company news<br>
+• **Works for you**: scheduled jobs, CSV import/export and optional **weekly Telegram summaries**
+
+**By the numbers** · `7 currencies` · `3 market-data providers` · `3 chart views` · `2-tier deployment`
 
 <details>
-<summary><b>More details</b></summary>
+<summary><b>Deep dive</b>: data, backend and deployment</summary>
 <br>
 
-- Charts for portfolio value and P&L over time, per-ticker price history and allocation
-- Market data from yFinance, exchange rates from SerpAPI with yFinance as fallback, news from Finnhub
-- SQLite in WAL mode with zero-data-loss migrations, scheduled jobs with APScheduler
-- Dark mode that respects the system preference
-- Deployment-ready: backend on Railway and frontend on Vercel
+**Data**<br>
+Prices from yFinance, exchange rates from SerpAPI (Google Finance) with yFinance as fallback, and news from Finnhub.
+
+**Backend**<br>
+Flask with blueprints, SQLite in WAL mode with zero-data-loss migrations, and background jobs with APScheduler.
+
+**Frontend**<br>
+React + Vite with portfolio value and P&L over time, per-ticker price history, allocation donut and dark mode that follows the system preference.
+
+**Deployment**<br>
+Backend on Railway and frontend on Vercel, with a step-by-step guide included.
 
 </details>
 
-<img src="https://img.shields.io/badge/Flask-000000?style=flat-square&logo=flask&logoColor=white"> <img src="https://img.shields.io/badge/React-20232A?style=flat-square&logo=react&logoColor=61DAFB"> <img src="https://img.shields.io/badge/Vite-646CFF?style=flat-square&logo=vite&logoColor=white"> <img src="https://img.shields.io/badge/SQLite-003B57?style=flat-square&logo=sqlite&logoColor=white"> <img src="https://img.shields.io/badge/Chart.js-FF6384?style=flat-square&logo=chartdotjs&logoColor=white">
-
 ---
 
-<sub>More: 🧮 <a href="https://github.com/jossseluuu/DataStructures-Algorithms">DataStructures-Algorithms</a> (data structures from scratch in C++, with tests) · ✈️ <a href="https://github.com/jossseluuu/airline-database-project">airline-database-project</a> (relational model for airline operations: pilots, crews, flights, aircraft, maintenance)</sub>
+### 🧩 Other projects
+
+| Project | What it is | Stack |
+|---|---|---|
+| 🧮 **[DataStructures-Algorithms](https://github.com/jossseluuu/DataStructures-Algorithms)** | Classic data structures implemented from scratch, starting with linear structures, each backed by its own test suite | ![C++](https://img.shields.io/badge/C++-00599C?style=flat-square&logo=cplusplus&logoColor=white) |
+| ✈️ **[airline-database-project](https://github.com/jossseluuu/airline-database-project)** | Relational database design for airline operations: pilots, cabin crew, flights, flight plans, aircraft, airports, hangars and maintenance events | ![SQL](https://img.shields.io/badge/SQL-4479A1?style=flat-square&logo=postgresql&logoColor=white) ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black) |
 
 ---
 
@@ -251,39 +325,74 @@ Construyo software **útil, seguro y fácil de razonar**, y me gusta demostrar l
 
 ### 🚀 Proyectos destacados
 
-**🏢 [CompanyAgentsHQ](https://github.com/jossseluuu/CompanyAgentsHQ) · Agentes de IA como una empresa real** · <sub>proyecto personal en desarrollo</sub>
+| | Proyecto | En una línea | Área | Estado |
+|:-:|---|---|---|---|
+| 🏢 | **[CompanyAgentsHQ](https://github.com/jossseluuu/CompanyAgentsHQ)** | Una empresa de agentes de IA que diriges desde una oficina isométrica | IA multiagente · Full-stack | 🚧 En desarrollo |
+| 🛫 | **[openScope](https://github.com/jossseluuu/openScope)** | Bots de IA que controlan todo el tráfico aéreo de un aeropuerto | Aprendizaje por refuerzo · Optimización | 🧪 Bot A listo · Bot B entrenando |
+| 🔐 | **[I-CPU](https://github.com/jossseluuu/I-CPU)** | Datos ocultos en imágenes que no se pueden leer ni detectar | Criptografía · Seguridad | ✅ Estable |
+| 📡 | **[HowThingsTalk](https://github.com/jossseluuu/HowThingsTalk)** | Cómo funcionan de verdad los aparatos, de la analogía a la física | Divulgación técnica · Hardware | 📝 Un artículo cada día laborable |
+| 📈 | **[InvestDashboard](https://github.com/jossseluuu/InvestDashboard)** | Seguimiento de una cartera de inversión en tiempo real | Full-stack · Finanzas | ✅ Listo para desplegar |
 
-Das un objetivo al **agente CEO**, que lo planifica y lo reparte entre departamentos; los supervisores revisan el trabajo y todo queda archivado y es buscable, dentro de una **oficina isométrica 2.5D** donde ves trabajar a los agentes.<br>
-• **Organigrama real** con supervisión, escalado y **bandeja de aprobaciones** para acciones sensibles<br>
-• **Bases de conocimiento RAG** por empresa, departamento, sala o agente, con citas de las fuentes<br>
-• **Registro de auditoría encadenado con hashes**, un **agente Auditor** independiente y **presupuesto de IA por agente**<br>
-• Diseñado a partir de una especificación completa: **más de 160 requisitos funcionales y 60 no funcionales**, todos medibles
+**🏢 [CompanyAgentsHQ](https://github.com/jossseluuu/CompanyAgentsHQ) · Una empresa de agentes de IA que diriges desde una oficina isométrica**
 
-**🛫 [openScope](https://github.com/jossseluuu/openScope) · Controladores aéreos con IA** · <sub>fork de código abierto · JavaScript + Python</sub>
+> Das un objetivo al **agente CEO**. Lo convierte en un plan, lo reparte entre departamentos, cada jefe revisa el trabajo de su equipo antes de que llegue a ti y todo queda archivado y es buscable, mientras ves a los agentes moverse por las salas.
 
-Sobre el simulador de control aéreo **openScope** he construido **dos bots de IA que controlan todo el tráfico de un aeropuerto** (llegadas, salidas y conflictos) usando solo las órdenes que daría un controlador humano.<br>
-• **Bot A**: reglas expertas y optimización (secuenciación AMAN/DMAN, vectores, esperas y resolución de conflictos), con parámetros ajustados con **CMA-ES**<br>
-• **Bot B**: **aprendizaje por refuerzo (PPO)** en PyTorch con curriculum, preentrenado **imitando al Bot A (DAgger)** y exportado a **ONNX** para jugar en el navegador<br>
-• Ambos sujetos a la normativa real **OACI, EASA (RECAT-EU) y FAA** y a un **escudo de seguridad** común<br>
+• **Un organigrama real, no una cadena de prompts**: jefes, supervisores, escalado y **bandeja de aprobaciones** para acciones sensibles<br>
+• **Conocimiento con ámbito**: bases RAG por empresa, departamento, sala o agente, y cada respuesta cita sus fuentes<br>
+• **Responsable por diseño**: auditoría encadenada con hashes, un **agente Auditor** que puede pausar a los demás y **presupuesto de IA por agente**<br>
+• **Arquitectura**: monolito modular, módulos de sala como plugins, worker sobre Redis, eventos por WebSocket y proveedor de LLM intercambiable (Claude, OpenAI u Ollama)
+
+**En cifras** · `8 agentes` · `12 módulos de sala` · `161 requisitos funcionales` · `66 requisitos no funcionales medibles`
+
+**🛫 [openScope](https://github.com/jossseluuu/openScope) · Dos controladores aéreos con IA que gestionan un aeropuerto entero**
+
+> Llegadas, salidas y conflictos: los bots lo gestionan todo usando **solo las órdenes que daría un controlador humano**, por la misma vía y bajo normativa aeronáutica real.
+
+• **Bot A, reglas expertas + optimización**: secuenciación AMAN/DMAN, vectores, esperas y resolución de conflictos, con parámetros ajustados con **CMA-ES** y el motivo de cada orden<br>
+• **Bot B, aprendizaje por refuerzo**: **PPO** en PyTorch con curriculum, preentrenado **imitando al Bot A (DAgger)** y exportado a **ONNX** para jugar en el navegador<br>
+• **Normativa real**: separaciones **OACI, EASA (RECAT-EU) y FAA** y un **escudo de seguridad** común que bloquea órdenes inseguras<br>
 • **Simulador sin navegador** con entorno estilo Gymnasium para Python, página de auditoría de partidas y nuevos aeropuertos: **Madrid-Barajas (LEMD)** y **Málaga (LEMG)**
 
-**🔐 [I-CPU](https://github.com/jossseluuu/I-CPU) · Esteganografía cifrada** · <sub>criptografía aplicada · C++20</sub>
+**En cifras** · `2 controladores con IA` · `3 perfiles normativos` · `10 reglas en 4 niveles de prioridad` · `2 aeropuertos nuevos` · `17 ficheros de tests nuevos`
 
-Oculta un texto o un fichero dentro de una imagen de forma que, **sin la contraseña, no se puede ni leer ni demostrar que existe**, y mide lo detectable que es el resultado.<br>
-• **Tres dominios de ocultación**: bits de los píxeles (PNG, BMP…), **coeficientes DCT** de JPEG sin recomprimir e **índices de paleta** de GIF<br>
-• **Argon2id + XChaCha20-Poly1305**, con posiciones derivadas de la contraseña y **cabecera cifrada**<br>
-• **Estegoanálisis integrado** (chi-cuadrado, análisis RS) y métricas de distorsión (PSNR, SSIM)<br>
+**🔐 [I-CPU](https://github.com/jossseluuu/I-CPU) · Oculta un mensaje o un fichero en una imagen sin que se pueda leer ni demostrar que existe**
+
+> La mayoría de herramientas de esteganografía se quedan en ocultar. I-CPU además **ataca su propio resultado** con estegoanálisis real, para saber con números lo detectable que es cada configuración.
+
+• **Tres dominios de ocultación**: bits de los píxeles (PNG, BMP, TGA, QOI, PNM), **coeficientes DCT** de JPEG sin recomprimir e **índices de paleta** de GIF, incluidos los animados<br>
+• **Criptografía moderna**: Argon2id + XChaCha20-Poly1305; las posiciones salen de la contraseña y hasta la **cabecera va cifrada**<br>
+• **Estegoanálisis integrado** (chi-cuadrado, análisis RS, chi-cuadrado DCT) y métricas de distorsión (PSNR, SSIM)<br>
 • **CLI con modo guiado** y **GUI web local sin conexión**; CMake, tests, CI y ADRs
 
-**📡 [HowThingsTalk](https://github.com/jossseluuu/HowThingsTalk) · Cómo funcionan de verdad los aparatos** · <sub>divulgación técnica · ES/EN · un artículo cada día laborable</sub>
+**En cifras** · `3 dominios de ocultación` · `7 formatos de imagen` · `3 pruebas de estegoanálisis` · `2 interfaces`
 
-Biblioteca que explica **cómo funcionan por dentro los aparatos del día a día**: teléfonos, portátiles, auriculares, relojes, altavoces, tarjetas, bombillas y coches. Cada artículo responde a **una pregunta concreta** en **cuatro capas de profundidad**: la pregunta y su nivel, la respuesta corta, el modelo mental (y dónde se rompe la analogía) y el mecanismo técnico, con protocolos, tramas de datos, espectro de radio y números reales.
+**📡 [HowThingsTalk](https://github.com/jossseluuu/HowThingsTalk) · Una biblioteca bilingüe sobre cómo funcionan por dentro los aparatos del día a día**
 
-**📈 [InvestDashboard](https://github.com/jossseluuu/InvestDashboard) · Dashboard de inversiones** · <sub>full-stack · Flask + React</sub>
+> Cada artículo responde a **una pregunta concreta** sobre teléfonos, portátiles, auriculares, relojes, altavoces, tarjetas, bombillas o coches, con el rigor que espera un experto y la claridad que necesita un principiante.
 
-Seguimiento de una cartera de inversión en un solo sitio: precios en tiempo real, **multidivisa** con tipos de cambio en vivo, evolución de valor y P&L, fundamentales, valoraciones de analistas, resultados, dividendos y noticias. Incluye tareas programadas, importación/exportación CSV, **alertas semanales por Telegram** y despliegue en Railway + Vercel.
+• **Cuatro capas de profundidad**: quien lee puede quedarse en la idea central o bajar hasta la física<br>
+• **De la analogía al mecanismo**: un modelo mental cotidiano, el punto exacto donde se rompe, y después protocolos, tramas de datos, espectro de radio y números reales<br>
+• **Atemporal a propósito**: sin noticias, reseñas ni recomendaciones de compra
 
-<sub>Más: 🧮 <a href="https://github.com/jossseluuu/DataStructures-Algorithms">DataStructures-Algorithms</a> (estructuras de datos desde cero en C++, con tests) · ✈️ <a href="https://github.com/jossseluuu/airline-database-project">airline-database-project</a> (modelo relacional para la operativa de una aerolínea)</sub>
+**En cifras** · `8 familias de aparatos` · `4 capas de profundidad` · `2 idiomas` · `5 artículos nuevos a la semana`
+
+**📈 [InvestDashboard](https://github.com/jossseluuu/InvestDashboard) · Toda una cartera de inversión en un solo sitio**
+
+> Aplicación full-stack que reúne datos de mercado de varios proveedores, los convierte a la moneda que elijas y los mantiene actualizados en segundo plano.
+
+• **Precios en vivo en tu moneda**: 7 divisas con tipos de cambio en directo y proveedor de respaldo automático<br>
+• **Análisis por activo**: fundamentales, valoraciones y precios objetivo de analistas, resultados con sorpresa en BPA, dividendos y noticias<br>
+• **Trabaja por ti**: tareas programadas, importación/exportación CSV y **resúmenes semanales por Telegram**<br>
+• **Despliegue**: backend en Railway y frontend en Vercel
+
+**En cifras** · `7 divisas` · `3 proveedores de datos` · `3 vistas de gráficas` · `despliegue en 2 capas`
+
+### 🧩 Otros proyectos
+
+| Proyecto | Qué es | Stack |
+|---|---|---|
+| 🧮 **[DataStructures-Algorithms](https://github.com/jossseluuu/DataStructures-Algorithms)** | Estructuras de datos clásicas implementadas desde cero, empezando por las lineales, cada una con su batería de tests | ![C++](https://img.shields.io/badge/C++-00599C?style=flat-square&logo=cplusplus&logoColor=white) |
+| ✈️ **[airline-database-project](https://github.com/jossseluuu/airline-database-project)** | Diseño de una base de datos relacional para la operativa de una aerolínea: pilotos, tripulación, vuelos, planes de vuelo, aeronaves, aeropuertos, hangares y mantenimiento | ![SQL](https://img.shields.io/badge/SQL-4479A1?style=flat-square&logo=postgresql&logoColor=white) ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black) |
 
 </details>
 
