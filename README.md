@@ -5,9 +5,7 @@
 
 # Hi, I'm José Luis López 👋
 
-<a href="https://github.com/jossseluuu">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&size=22&duration=3000&pause=1200&color=58A6FF&center=true&vCenter=true&width=560&height=50&lines=Final-year+CS+%26+Engineering+student;Backend+%C2%B7+Applied+AI+%C2%B7+Security;Building+AI+agents+that+run+a+company;Training+AI+air+traffic+controllers;Hiding+encrypted+data+inside+images;Explaining+how+everyday+tech+works" alt="Final-year CS &amp; Engineering student · Backend · Applied AI · Security" />
-</a>
+<p>I'm a Computer Science student from Granada, Spain. I enjoy understanding how things work, building software to explore ideas, and turning technical curiosity into projects I can test, improve and share.</p>
 
 <p>
   <a href="https://www.linkedin.com/in/joseluislop/"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"></a>
@@ -30,41 +28,45 @@
 
 I'm a **final-year Computer Science & Engineering student** at the **Universidad de Granada (UGR)**, Spain.
 
-I spent a **full academic year at the University of Montana (USA)** through an international mobility program, where I also **worked in the United States**. That year taught me to study, work and solve problems in English, inside teams with very different backgrounds and ways of working, and made me more independent, adaptable and comfortable with responsibility.
+I spent a **full academic year at the University of Montana (USA)** through an international mobility program, where I also **worked in the United States**. Living and working in a different environment helped me become more independent, adapt to unfamiliar situations and collaborate with people with different backgrounds.
 
-I build software that is **useful, secure and easy to reason about**, and I like to prove what I learn with complete projects.
+I enjoy understanding how things work and turning that curiosity into software. I'm especially interested in projects where different areas meet: backend engineering, applied AI, security, optimisation and the systems that connect them. I like taking an idea beyond a quick prototype: thinking through its architecture, implementing it, testing how it behaves and documenting the decisions behind it.
 
 **What I'm working on**<br>
-🏢 **[CompanyAgentsHQ](https://github.com/jossseluuu/CompanyAgentsHQ)**: a company run by AI agents that you manage from a live isometric office.<br>
-🛫 **[openScope](https://github.com/jossseluuu/openScope)**: AI bots that act as air traffic controllers, one built on expert rules and optimisation, the other on reinforcement learning.<br>
-🔐 **[I-CPU](https://github.com/jossseluuu/I-CPU)**: encrypted steganography in modern C++, with built-in steganalysis.<br>
-📡 **[HowThingsTalk](https://github.com/jossseluuu/HowThingsTalk)**: a bilingual library on how everyday devices really work, with **a new article every weekday**.
+🏢 **[CompanyAgentsHQ](https://github.com/jossseluuu/CompanyAgentsHQ)**: exploring how AI agents can collaborate inside a structured company, with roles, supervision and a shared working environment.<br>
+🛫 **[openScope](https://github.com/jossseluuu/openScope)**: experimenting with AI air traffic controllers, combining expert rules, optimisation and reinforcement learning on top of an open-source simulator.<br>
+🔐 **[I-CPU](https://github.com/jossseluuu/I-CPU)**: encrypted image steganography in modern C++, together with tools to analyse detectability and image distortion.<br>
+📡 **[HowThingsTalk](https://github.com/jossseluuu/HowThingsTalk)**: a bilingual technical writing project explaining how everyday devices and technologies work, from intuitive ideas to the underlying engineering.<br>
+📈 **[InvestDashboard](https://github.com/jossseluuu/InvestDashboard)**: a full-stack dashboard that brings portfolio tracking, market data and financial research together.
 
 **How I work**<br>
-📐 **I design before I code.** Specs, requirements and written architecture decisions (ADRs) come first, so the code has a clear target and every trade-off is documented.<br>
-📏 **I measure instead of guessing.** My projects ship with their own evaluation: steganalysis and distortion metrics in I-CPU, safety and efficiency metrics for the openScope bots, cost tracking in CompanyAgentsHQ.<br>
-🛡️ **I treat safety as a feature.** Approval steps, safety shields, least privilege and audit trails are part of the design, not something added at the end.<br>
-✅ **I finish what I start.** Tests, CI, documentation and a one-command setup are part of "done".<br>
-🗣️ **I explain things clearly.** I write technical content in English and Spanish every weekday, for beginners and experts at the same time.<br>
-🌍 **I adapt fast.** A year studying and working in the US taught me to get up to speed quickly in new teams, cultures and codebases.
+📐 **I think about the design before the implementation.** I enjoy defining requirements, exploring alternatives and documenting architecture decisions before committing to an approach.<br>
+📏 **I like being able to evaluate the result.** Whether it's image distortion and steganalysis, the safety and efficiency of an air traffic controller, or the behaviour of a multi-agent system, I want to understand how well it actually works.<br>
+🛡️ **I consider security and reliability part of the design.** Permissions, validation, supervision and traceability matter from the beginning, not only when something goes wrong.<br>
+✅ **I care about the whole project.** Tests, documentation, maintainability and a reproducible setup are part of building something properly.<br>
+🗣️ **I enjoy explaining technical ideas.** I write technical content in both English and Spanish, and I like making complex topics understandable without losing the details.<br>
+🌍 **I adapt to new environments.** Studying and working in the US helped me become more comfortable learning new tools, joining unfamiliar teams and finding my way around new codebases.
 
+I'm always learning, building and looking for problems worth exploring. Feel free to take a look around my repositories or get in touch.
 ---
 
 ## 🚀 Featured Projects
 
-| | Project | In one line | Area | Status |
-|:-:|---|---|---|---|
-| 🏢 | **[CompanyAgentsHQ](https://github.com/jossseluuu/CompanyAgentsHQ)** | A company of AI agents you run from a live isometric office | Multi-agent AI · Full-stack | 🚧 In development |
-| 🛫 | **[openScope](https://github.com/jossseluuu/openScope)** | AI bots that control all the air traffic of an airport | Reinforcement learning · Optimisation | 🧪 Bot A ready · Bot B training |
-| 🔐 | **[I-CPU](https://github.com/jossseluuu/I-CPU)** | Hide data in images that can't be read or even detected | Cryptography · Security | ✅ Stable |
-| 📡 | **[HowThingsTalk](https://github.com/jossseluuu/HowThingsTalk)** | How everyday devices really work, from analogy to physics | Technical writing · Hardware | 📝 New article every weekday |
-| 📈 | **[InvestDashboard](https://github.com/jossseluuu/InvestDashboard)** | Real-time investment portfolio tracker | Full-stack · Finance | ✅ Deployment-ready |
+I like projects that make me understand a problem beyond the code itself. Some involve designing systems with many moving parts; others explore security, machine learning or the technology we use every day. What connects them is the process: exploring an idea, working out how it should behave, building it and finding ways to evaluate the result.
 
+| | Project | What it explores | Area | Status |
+|:-:|---|---|---|---|
+| 🏢 | **[CompanyAgentsHQ](https://github.com/jossseluuu/CompanyAgentsHQ)** | Organising AI agents into a company with roles, supervision and a visible workspace | Multi-agent AI · Full-stack | 🚧 In development |
+| 🛫 | **[openScope](https://github.com/jossseluuu/openScope)** | Comparing expert-rule and reinforcement-learning controllers in an air traffic simulator | AI · Reinforcement learning · Optimisation | 🧪 Bot A ready · Bot B training |
+| 🔐 | **[I-CPU](https://github.com/jossseluuu/I-CPU)** | Hiding encrypted messages and files in images, with tools to analyse detectability | C++ · Cryptography · Steganography | ✅ Stable |
+| 📡 | **[HowThingsTalk](https://github.com/jossseluuu/HowThingsTalk)** | Explaining how everyday devices work, from intuitive models to their underlying mechanisms | Technical writing · Hardware · Networking | 📝 New article every weekday |
+| 📈 | **[InvestDashboard](https://github.com/jossseluuu/InvestDashboard)** | Bringing portfolio performance, market data and research together in one dashboard | Full-stack · Finance · Data | ✅ Deployment-ready |
 ---
 
 ### 🏢 [CompanyAgentsHQ](https://github.com/jossseluuu/CompanyAgentsHQ)
 
-**A company made of AI agents that you run from a live isometric office.**<br>
+**An AI-powered company that you can actually manage.**<br>
+A personal software project exploring how AI agents can collaborate inside a structured company, with roles, responsibilities, supervision and a shared working environment.<br>
 <img src="https://img.shields.io/badge/status-in_development-F59E0B?style=flat-square"> <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white"> <img src="https://img.shields.io/badge/FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white"> <img src="https://img.shields.io/badge/React-20232A?style=flat-square&logo=react&logoColor=61DAFB"> <img src="https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white"> <img src="https://img.shields.io/badge/Three.js_/_R3F-000000?style=flat-square&logo=threedotjs&logoColor=white"> <img src="https://img.shields.io/badge/PostgreSQL_+_pgvector-4169E1?style=flat-square&logo=postgresql&logoColor=white"> <img src="https://img.shields.io/badge/Redis-DC382D?style=flat-square&logo=redis&logoColor=white"> <img src="https://img.shields.io/badge/Claude_API-D97757?style=flat-square&logo=anthropic&logoColor=white"> <img src="https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white">
 
 > You give a goal to the **CEO agent**. It turns it into a plan, delegates it to its departments, managers review their team's work before it reaches you, and every result is archived and searchable, while you watch the agents walk between rooms as they work.
@@ -111,7 +113,8 @@ MVP: give a goal to the CEO and watch it be planned, delegated, executed and arc
 
 ### 🛫 [openScope](https://github.com/jossseluuu/openScope)
 
-**Two AI air traffic controllers that run a whole airport, built on top of an open-source ATC simulator.**<br>
+**Exploring how AI could handle the complexity of air traffic control.**<br>
+Built on top of the open-source openScope simulator, this project adds two AI controllers and an environment for comparing their decisions, performance and safety.<br>
 <img src="https://img.shields.io/badge/status-Bot_A_ready_·_Bot_B_training-8B5CF6?style=flat-square"> <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black"> <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white"> <img src="https://img.shields.io/badge/PyTorch-EE4C2C?style=flat-square&logo=pytorch&logoColor=white"> <img src="https://img.shields.io/badge/ONNX-005CED?style=flat-square&logo=onnx&logoColor=white"> <img src="https://img.shields.io/badge/Reinforcement_learning_(PPO)-6E40C9?style=flat-square"> <img src="https://img.shields.io/badge/CMA--ES-6E40C9?style=flat-square"> <img src="https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=nodedotjs&logoColor=white">
 
 > Arrivals, departures and conflicts: the bots handle all of it using **only the commands a human controller would give**, through the same command line, under real aviation rules.
@@ -153,7 +156,8 @@ Bot B's full training run and a head-to-head comparison against Bot A.
 
 ### 🔐 [I-CPU](https://github.com/jossseluuu/I-CPU)
 
-**Hide a message or a whole file inside an image so that, without the password, it can't be read or even proven to exist.**<br>
+**Hiding information inside images — and measuring how well it stays hidden.**<br>
+I-CPU combines encrypted image steganography with tools for analysing detectability and the visual distortion introduced by embedding.<br>
 <img src="https://img.shields.io/badge/status-stable-22C55E?style=flat-square"> <img src="https://img.shields.io/badge/C++20-00599C?style=flat-square&logo=cplusplus&logoColor=white"> <img src="https://img.shields.io/badge/CMake-064F8C?style=flat-square&logo=cmake&logoColor=white"> <img src="https://img.shields.io/badge/Argon2id_·_XChaCha20--Poly1305-000000?style=flat-square&logo=letsencrypt&logoColor=white"> <img src="https://img.shields.io/badge/GitHub_Actions-2088FF?style=flat-square&logo=githubactions&logoColor=white">
 
 > Most steganography tools stop at hiding the data. I-CPU also **attacks its own output** with real steganalysis, so you can see how detectable each configuration is with numbers instead of guesses.
@@ -185,7 +189,8 @@ CMake presets, automated tests, CI, architecture decision records (ADRs) and a s
 
 ### 📡 [HowThingsTalk](https://github.com/jossseluuu/HowThingsTalk)
 
-**A bilingual library on how the devices we use every day really work underneath.**<br>
+**A place to understand the technology we use without thinking about it.**<br>
+HowThingsTalk is my bilingual technical writing project. Each article starts with a concrete question about everyday technology and gradually explores the mechanisms behind it.<br>
 <img src="https://img.shields.io/badge/new_article-every_weekday-0EA5E9?style=flat-square"> <img src="https://img.shields.io/badge/ES_/_EN-bilingual-0A66C2?style=flat-square"> <img src="https://img.shields.io/badge/Markdown-000000?style=flat-square&logo=markdown&logoColor=white"> <img src="https://img.shields.io/badge/Networking_·_Radio_·_Hardware-6E40C9?style=flat-square">
 
 > Each article answers **one concrete question** about phones, laptops, earbuds, watches, speakers, cards, light bulbs or cars, with the rigour an expert expects and the clarity a beginner needs.
@@ -214,7 +219,8 @@ Every article exists in Spanish and English with the same structure, and the pro
 
 ### 📈 [InvestDashboard](https://github.com/jossseluuu/InvestDashboard)
 
-**All of an investment portfolio in one place: live prices, performance, fundamentals and news.**<br>
+**A personal dashboard for understanding an investment portfolio.**<br>
+InvestDashboard brings portfolio tracking, market information and company research together in one full-stack application.<br>
 <img src="https://img.shields.io/badge/status-deployment--ready-22C55E?style=flat-square"> <img src="https://img.shields.io/badge/Flask-000000?style=flat-square&logo=flask&logoColor=white"> <img src="https://img.shields.io/badge/React-20232A?style=flat-square&logo=react&logoColor=61DAFB"> <img src="https://img.shields.io/badge/Vite-646CFF?style=flat-square&logo=vite&logoColor=white"> <img src="https://img.shields.io/badge/SQLite-003B57?style=flat-square&logo=sqlite&logoColor=white"> <img src="https://img.shields.io/badge/Chart.js-FF6384?style=flat-square&logo=chartdotjs&logoColor=white">
 
 > A full-stack app that pulls market data from several providers, normalises it into one currency of your choice and keeps it updated in the background.
@@ -305,35 +311,38 @@ Backend on Railway and frontend on Vercel, with a step-by-step guide included.
 
 Soy **estudiante de último curso de Ingeniería Informática** en la **Universidad de Granada (UGR)**.
 
-Pasé **un curso académico completo en la University of Montana (EE. UU.)** gracias a un programa de movilidad internacional, donde además **trabajé en Estados Unidos**. Ese año me enseñó a estudiar, trabajar y resolver problemas en inglés, dentro de equipos con orígenes y formas de trabajar muy distintas, y me hizo más autónomo, adaptable y acostumbrado a asumir responsabilidades.
+Pasé **un curso académico completo en la University of Montana (EE. UU.)** gracias a un programa de movilidad internacional, donde además **trabajé en Estados Unidos**. Vivir y trabajar en un entorno diferente me ayudó a ganar autonomía, adaptarme a situaciones nuevas y colaborar con personas con experiencias y formas de trabajar distintas.
 
-Construyo software **útil, seguro y fácil de razonar**, y me gusta demostrar lo que aprendo con proyectos completos.
+Me gusta entender cómo funcionan las cosas y convertir esa curiosidad en software. Suelo interesarme por proyectos en los que se cruzan varias áreas: desarrollo backend, inteligencia artificial aplicada, seguridad, optimización y los sistemas que conectan todo eso. Disfruto llevando una idea más allá de un prototipo rápido: pensar su arquitectura, implementarla, probar cómo se comporta y documentar las decisiones que hay detrás.
 
 **En qué estoy trabajando**<br>
-🏢 **[CompanyAgentsHQ](https://github.com/jossseluuu/CompanyAgentsHQ)**: una empresa formada por agentes de IA que diriges desde una oficina isométrica en tiempo real.<br>
-🛫 **[openScope](https://github.com/jossseluuu/openScope)**: bots de IA que hacen de controladores aéreos, uno basado en reglas expertas y optimización y otro en aprendizaje por refuerzo.<br>
-🔐 **[I-CPU](https://github.com/jossseluuu/I-CPU)**: esteganografía cifrada en C++ moderno, con estegoanálisis integrado.<br>
-📡 **[HowThingsTalk](https://github.com/jossseluuu/HowThingsTalk)**: una biblioteca bilingüe sobre cómo funcionan de verdad los aparatos del día a día, con **un artículo nuevo cada día laborable**.
+🏢 **[CompanyAgentsHQ](https://github.com/jossseluuu/CompanyAgentsHQ)**: explorando cómo pueden colaborar agentes de IA dentro de una empresa estructurada, con cargos, supervisión y un entorno de trabajo compartido.<br>
+🛫 **[openScope](https://github.com/jossseluuu/openScope)**: experimentando con controladores aéreos basados en IA, combinando reglas expertas, optimización y aprendizaje por refuerzo sobre un simulador open source.<br>
+🔐 **[I-CPU](https://github.com/jossseluuu/I-CPU)**: esteganografía cifrada en imágenes con C++ moderno, junto con herramientas para analizar su detectabilidad y la distorsión que producen.<br>
+📡 **[HowThingsTalk](https://github.com/jossseluuu/HowThingsTalk)**: un proyecto bilingüe de divulgación técnica que explica cómo funcionan los dispositivos cotidianos, desde las ideas intuitivas hasta la ingeniería que hay detrás.<br>
+📈 **[InvestDashboard](https://github.com/jossseluuu/InvestDashboard)**: un panel full-stack que reúne seguimiento de carteras, datos de mercado e investigación financiera.
 
 **Cómo trabajo**<br>
-📐 **Diseño antes de programar.** Primero especificación, requisitos y decisiones de arquitectura por escrito (ADRs), para que el código tenga un objetivo claro y cada decisión quede documentada.<br>
-📏 **Mido en lugar de suponer.** Mis proyectos incluyen su propia evaluación: estegoanálisis y métricas de distorsión en I-CPU, métricas de seguridad y eficiencia para los bots de openScope, control de costes en CompanyAgentsHQ.<br>
-🛡️ **La seguridad es parte del producto.** Aprobaciones, escudos de seguridad, mínimo privilegio y trazabilidad forman parte del diseño desde el principio.<br>
-✅ **Termino lo que empiezo.** Tests, CI, documentación e instalación con un solo comando son parte de "terminado".<br>
-🗣️ **Explico con claridad.** Escribo divulgación técnica en español y en inglés cada día laborable, para principiantes y expertos a la vez.<br>
-🌍 **Me adapto rápido.** Un año estudiando y trabajando en EE. UU. me enseñó a ponerme al día enseguida en equipos, culturas y códigos nuevos.
+📐 **Pienso el diseño antes de implementar.** Me gusta definir requisitos, estudiar alternativas y documentar las decisiones de arquitectura antes de comprometerme con un enfoque.<br>
+📏 **Prefiero poder evaluar los resultados.** Ya sea la distorsión y el estegoanálisis de imágenes, la seguridad y eficiencia de un controlador aéreo o el comportamiento de un sistema multiagente, quiero entender qué tal funciona realmente.<br>
+🛡️ **La seguridad y la fiabilidad forman parte del diseño.** Los permisos, la validación, la supervisión y la trazabilidad importan desde el principio, no solo cuando algo falla.<br>
+✅ **Me importa el proyecto completo.** Los tests, la documentación, el mantenimiento y una instalación reproducible también forman parte de construir algo bien.<br>
+🗣️ **Me gusta explicar ideas técnicas.** Escribo contenido técnico tanto en español como en inglés e intento hacer comprensibles los temas complejos sin perder los detalles importantes.<br>
+🌍 **Me adapto a entornos nuevos.** Estudiar y trabajar en Estados Unidos me ayudó a desenvolverme mejor aprendiendo herramientas, incorporándome a equipos y explorando bases de código desconocidas.
 
+Sigo aprendiendo, construyendo cosas y buscando problemas interesantes que merezca la pena explorar. ¡Puedes echar un vistazo a mis repositorios o ponerte en contacto conmigo!
 ### 🚀 Proyectos destacados
 
-| | Proyecto | En una línea | Área | Estado |
-|:-:|---|---|---|---|
-| 🏢 | **[CompanyAgentsHQ](https://github.com/jossseluuu/CompanyAgentsHQ)** | Una empresa de agentes de IA que diriges desde una oficina isométrica | IA multiagente · Full-stack | 🚧 En desarrollo |
-| 🛫 | **[openScope](https://github.com/jossseluuu/openScope)** | Bots de IA que controlan todo el tráfico aéreo de un aeropuerto | Aprendizaje por refuerzo · Optimización | 🧪 Bot A listo · Bot B entrenando |
-| 🔐 | **[I-CPU](https://github.com/jossseluuu/I-CPU)** | Datos ocultos en imágenes que no se pueden leer ni detectar | Criptografía · Seguridad | ✅ Estable |
-| 📡 | **[HowThingsTalk](https://github.com/jossseluuu/HowThingsTalk)** | Cómo funcionan de verdad los aparatos, de la analogía a la física | Divulgación técnica · Hardware | 📝 Un artículo cada día laborable |
-| 📈 | **[InvestDashboard](https://github.com/jossseluuu/InvestDashboard)** | Seguimiento de una cartera de inversión en tiempo real | Full-stack · Finanzas | ✅ Listo para desplegar |
+Me gustan los proyectos que me obligan a entender un problema más allá del código. Hay desde sistemas de IA con muchas piezas que deben coordinarse hasta herramientas de seguridad y divulgación técnica. Lo que los conecta es el proceso: explorar una idea, pensar cómo debería funcionar, construirla y buscar formas de evaluar el resultado.
 
-**🏢 [CompanyAgentsHQ](https://github.com/jossseluuu/CompanyAgentsHQ) · Una empresa de agentes de IA que diriges desde una oficina isométrica**
+| | Proyecto | Qué explora | Área | Estado |
+|:-:|---|---|---|---|
+| 🏢 | **[CompanyAgentsHQ](https://github.com/jossseluuu/CompanyAgentsHQ)** | Organizar agentes de IA en una empresa con cargos, supervisión y un entorno de trabajo visible | IA multiagente · Full-stack | 🚧 En desarrollo |
+| 🛫 | **[openScope](https://github.com/jossseluuu/openScope)** | Comparar controladores basados en reglas expertas y aprendizaje por refuerzo en un simulador aéreo | IA · Aprendizaje por refuerzo · Optimización | 🧪 Bot A listo · Bot B entrenando |
+| 🔐 | **[I-CPU](https://github.com/jossseluuu/I-CPU)** | Ocultar mensajes y archivos cifrados en imágenes y analizar su detectabilidad | C++ · Criptografía · Esteganografía | ✅ Estable |
+| 📡 | **[HowThingsTalk](https://github.com/jossseluuu/HowThingsTalk)** | Explicar cómo funcionan los dispositivos cotidianos, desde modelos intuitivos hasta sus mecanismos internos | Divulgación técnica · Hardware · Redes | 📝 Un artículo cada día laborable |
+| 📈 | **[InvestDashboard](https://github.com/jossseluuu/InvestDashboard)** | Reunir el rendimiento de una cartera, datos de mercado e información financiera en un panel | Full-stack · Finanzas · Datos | ✅ Listo para desplegar |
+**🏢 [CompanyAgentsHQ](https://github.com/jossseluuu/CompanyAgentsHQ) · Una empresa de agentes de IA que puedes gestionar**
 
 > Das un objetivo al **agente CEO**. Lo convierte en un plan, lo reparte entre departamentos, cada jefe revisa el trabajo de su equipo antes de que llegue a ti y todo queda archivado y es buscable, mientras ves a los agentes moverse por las salas.
 
@@ -344,7 +353,7 @@ Construyo software **útil, seguro y fácil de razonar**, y me gusta demostrar l
 
 **En cifras** · `8 agentes` · `12 módulos de sala` · `161 requisitos funcionales` · `66 requisitos no funcionales medibles`
 
-**🛫 [openScope](https://github.com/jossseluuu/openScope) · Dos controladores aéreos con IA que gestionan un aeropuerto entero**
+**🛫 [openScope](https://github.com/jossseluuu/openScope) · Explorando cómo la IA podría gestionar la complejidad del control aéreo**
 
 > Llegadas, salidas y conflictos: los bots lo gestionan todo usando **solo las órdenes que daría un controlador humano**, por la misma vía y bajo normativa aeronáutica real.
 
@@ -355,7 +364,7 @@ Construyo software **útil, seguro y fácil de razonar**, y me gusta demostrar l
 
 **En cifras** · `2 controladores con IA` · `3 perfiles normativos` · `10 reglas en 4 niveles de prioridad` · `2 aeropuertos nuevos` · `17 ficheros de tests nuevos`
 
-**🔐 [I-CPU](https://github.com/jossseluuu/I-CPU) · Oculta un mensaje o un fichero en una imagen sin que se pueda leer ni demostrar que existe**
+**🔐 [I-CPU](https://github.com/jossseluuu/I-CPU) · Ocultar información dentro de imágenes y medir lo bien que permanece oculta**
 
 > La mayoría de herramientas de esteganografía se quedan en ocultar. I-CPU además **ataca su propio resultado** con estegoanálisis real, para saber con números lo detectable que es cada configuración.
 
@@ -366,7 +375,7 @@ Construyo software **útil, seguro y fácil de razonar**, y me gusta demostrar l
 
 **En cifras** · `3 dominios de ocultación` · `7 formatos de imagen` · `3 pruebas de estegoanálisis` · `2 interfaces`
 
-**📡 [HowThingsTalk](https://github.com/jossseluuu/HowThingsTalk) · Una biblioteca bilingüe sobre cómo funcionan por dentro los aparatos del día a día**
+**📡 [HowThingsTalk](https://github.com/jossseluuu/HowThingsTalk) · Un espacio para entender la tecnología que utilizamos sin pensar en ella**
 
 > Cada artículo responde a **una pregunta concreta** sobre teléfonos, portátiles, auriculares, relojes, altavoces, tarjetas, bombillas o coches, con el rigor que espera un experto y la claridad que necesita un principiante.
 
@@ -376,7 +385,7 @@ Construyo software **útil, seguro y fácil de razonar**, y me gusta demostrar l
 
 **En cifras** · `8 familias de aparatos` · `4 capas de profundidad` · `2 idiomas` · `5 artículos nuevos a la semana`
 
-**📈 [InvestDashboard](https://github.com/jossseluuu/InvestDashboard) · Toda una cartera de inversión en un solo sitio**
+**📈 [InvestDashboard](https://github.com/jossseluuu/InvestDashboard) · Un panel personal para entender una cartera de inversión**
 
 > Aplicación full-stack que reúne datos de mercado de varios proveedores, los convierte a la moneda que elijas y los mantiene actualizados en segundo plano.
 
