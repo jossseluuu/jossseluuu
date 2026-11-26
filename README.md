@@ -36,7 +36,7 @@ I'm in the final stretch of a **Computer Science & Engineering** degree at the *
 The areas I keep coming back to are backend systems, applied AI, security and optimisation, and above all the places where they overlap. A few habits show up in almost everything I build:
 
 - **I write the design down first.** Specifications, requirements and architecture decision records (ADRs) come before the code, especially in [CompanyAgentsHQ](https://github.com/jossseluuu/CompanyAgentsHQ), [NPC Crowd Routines](https://github.com/jossseluuu/NPC-CrowdRoutines) and [I-CPU](https://github.com/jossseluuu/I-CPU).
-- **I want numbers, not impressions.** I-CPU runs steganalysis against its own output; every change to the openScope bots is kept or thrown away after dozens of seeded one-hour runs; NPC Crowd Routines replays every saved run and checks it by checksum, and reports p50/p95/p99 tick costs; MetaSleuth was checked against hundreds of real files before its first release.
+- **I want numbers, not impressions.** I-CPU runs steganalysis against its own output; every change to the openScope bots has to pass 30 seeded one-hour runs, and CI re-flies them every night; NPC Crowd Routines replays every saved run and checks it by checksum, and reports p50/p95/p99 tick costs; MetaSleuth was checked against hundreds of real files before its first release.
 - **Safety is part of the design.** Approval steps, audit logs, safety shields and strict content policies are there from the first commit, not added later.
 - **I like explaining things.** I write technical content in English and Spanish, aiming for something a beginner can follow and an expert won't wince at, and my tools explain themselves too: QuantumZero's README is a small course, and MetaSleuth ships its own guide.
 
@@ -46,7 +46,7 @@ The areas I keep coming back to are backend systems, applied AI, security and op
 
 | | Project | What it is | Status |
 |:-:|---|---|---|
-| 🛫 | **[openScope](#openscope)** | Three AI air traffic controllers that run a whole airport inside an open-source ATC simulator | 🛠️ Working on it |
+| 🛫 | **[openScope](#openscope)** | Three AI air traffic controllers that run a whole airport, plus a copilot, voice commands and live weather, in an open-source ATC simulator | 🛠️ Working on it |
 | 🏙️ | **[NPC Crowd Routines](#npccrowdroutines)** | A city of thousands of residents who each decide their own day, in a deterministic C++20 engine | 🛠️ Working on it |
 | 🔐 | **[I-CPU](#i-cpu)** | Hides encrypted data inside images, then attacks its own output to measure how detectable it is | ✅ Done |
 | 🔎 | **[MetaSleuth](#metasleuth)** | Shows, verifies and strips the metadata hidden in any file, fully offline | ✅ Done |
@@ -64,25 +64,34 @@ The areas I keep coming back to are backend systems, applied AI, security and op
 
 ### 🛫 openScope · AI air traffic controllers
 
-<sub>**JavaScript · Python · PyTorch · ONNX** · fork of [openscope/openscope](https://github.com/openscope/openscope): the bots, the realism layer, the headless simulator and two new airports are mine</sub>
+<sub>**JavaScript · Python · PyTorch · ONNX** · fork of [openscope/openscope](https://github.com/openscope/openscope): the bots, the copilot, the realism and safety layers, the weather, voice control, the headless simulator and eight airports are mine</sub>
 
-Bots that act as the controller for an entire airport, from the first arrival to the last departure, using **only the commands a human controller has** and following real ICAO, EASA and FAA separation rules. All three share one safety shield and one rulebook, ranked *safety → separation → procedure → efficiency*.
+Bots that act as the controller for an entire airport, from the first arrival to the last departure, using **only the commands a human controller has** and following real ICAO, EASA and FAA separation rules. All three see the same picture, choose from the same 66 actions, pass through one shared safety shield and are scored by one rulebook, ranked *safety → separation → procedure → efficiency*.
+
+**Three bots, three ways of thinking**
 
 | Bot | How it controls the airport | Where it stands |
 |---|---|---|
-| **A · The expert** | Hand-written rules plus planning algorithms. Every 5 seconds it predicts conflicts two minutes ahead and checks that each fix works before giving it, orders arrivals with simulated annealing and picks the best point to join the ILS. Every order comes with its reason. | Flying, with 0 collisions in 30 one-hour runs |
-| **B · The learner** | A small transformer network (about 480,000 parameters) that first copies 40,000 of Bot A's decisions and then improves on its own with reinforcement learning (PPO), from light traffic to full traffic with wind and emergencies. Exported to ONNX so it runs in the browser. | Training pipeline ready; the model is still to be trained |
-| **C · The team** | Six specialist agents (coordinator, arrivals, ILS, tower, departures and separation), each allowed only its own kind of order. Independent supervisors grade every instruction as *good*, *doubtful* or *bad* and work out the cause of each incident. | Flying, with 0 collisions and over 40,000 orders audited |
+| **A · The expert** | Hand-written rules plus planning algorithms. Every 5 seconds it predicts conflicts two minutes ahead and checks that each fix works (and doesn't create a new conflict) before giving it, orders arrivals with simulated annealing and picks the best point to join the ILS based on the terrain along the path. Every order comes with its reason. | Flying · 494 landings and 539 departures in 30 one-hour runs |
+| **B · The learner** | A small transformer network (about 480,000 parameters) that first copies Bot A's decisions and then improves on its own with reinforcement learning (PPO), from light traffic to full traffic with wind and emergencies. Built to be exported to ONNX and run in the browser. | Training · it already lands 55% of what Bot A does; it needs 80% to move on to PPO |
+| **C · The team** | Six specialist agents (coordinator, arrivals, ILS, tower, departures and separation), each allowed only its own kind of order. Independent supervisors grade every instruction as *good*, *doubtful* or *bad* and work out the cause of each incident. | Flying · 0 collisions and over 40,000 orders audited |
 
-- **Realistic where it matters:** wake turbulence, parallel approaches, terrain and minimum vectoring altitudes, squawk 7700 emergencies and rejected takeoffs with V1.
-- **Two new Spanish airports:** Madrid-Barajas and Málaga, built from the Spanish AIP.
-- **Measured, not guessed:** a headless simulator runs faster than real time and works as a Gymnasium environment from Python, so each change is judged over many seeded runs.
+**Not just for bots: what changes for a human player**
 
-**Bot A in numbers** (30 one-hour runs across five airport setups): `0 collisions` · `~16 landings/h` · `~18 departures/h` · `−81% separation losses in one month`
+- 🛡️ **Safety nets like the real ones:** STCA warns the controller two minutes ahead, TCAS II issues coordinated climb/descend advisories that pilots actually fly, and MSAW and APW warn about terrain and restricted areas.
+- 🌦️ **Live weather:** wind that shifts and gusts, runway changes when it goes out of limits, fog with low-visibility procedures and thunderstorms that pilots ask to avoid. Type `metar` to check it.
+- 🧑‍✈️ **A copilot:** it warns you, suggests orders with the reason behind them (press F4 to accept) or takes over a single aircraft or a whole sector, such as `delegate tower`.
+- 🎙️ **Talk to it:** hold F2 and give instructions in real ATC phraseology, in English or Spanish; it proposes the command and waits for you to confirm.
 
-> 🛠️ **Working on it.** Next: training Bot B, turning Bot C's agents into fully independent programs and closing the last separation losses.
+**Eight airports built from official charts:** Madrid, Málaga, Palma, Barcelona and Bilbao from the Spanish AIP, Paris-Charles de Gaulle from the French one, and Amsterdam and Singapore rebuilt from scratch. Airspace, SIDs, STARs, terrain and traffic come from the real AIRAC data, read with my own Python tools.
 
-▶️ **[Play it in your browser](https://jossseluuu.github.io/openScope/)** (type `bot a` or `bot c`) &nbsp;·&nbsp; 📂 **[Explore the repo](https://github.com/jossseluuu/openScope)**
+**Built like a real project:** a deterministic simulator that runs faster than real time and works as a Gymnasium environment from Python; a fixed 30-run protocol that every change has to pass; a nightly CI job that re-flies the bots and opens an issue if they get worse; an airport validator; architecture decision records; and documentation written as code.
+
+**Bot A in numbers** (30 one-hour runs across five airport setups): `~16 landings/h` · `~18 departures/h` · `~1.4 separation losses/h` · `−81% separation losses in one month`
+
+> 🛠️ **Working on it.** Next: retraining Bot B so it also sees the weather and the safety-net alerts, test-flying the new airports and adding Geneva, Hong Kong, Osaka and Sydney, and turning Bot C's agents into fully independent programs.
+
+▶️ **[Play it in your browser](https://jossseluuu.github.io/openScope/)** (type `bot a`, `bot c` or `copilot suggest`) &nbsp;·&nbsp; 📚 **[Read the docs](https://github.com/jossseluuu/openScope/tree/main/docs)** &nbsp;·&nbsp; 📂 **[Explore the repo](https://github.com/jossseluuu/openScope)**
 
 <br>
 
@@ -279,9 +288,9 @@ Cybersecurity for everyone, about the devices people actually use: what a thief 
 | **Languages** | <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white" alt="Python"> <img src="https://img.shields.io/badge/C++20-00599C?style=flat-square&logo=cplusplus&logoColor=white" alt="C++"> <img src="https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white" alt="TypeScript"> <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black" alt="JavaScript"> <img src="https://img.shields.io/badge/SQL-4479A1?style=flat-square&logo=postgresql&logoColor=white" alt="SQL"> |
 | **Backend & data** | <img src="https://img.shields.io/badge/FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white" alt="FastAPI"> <img src="https://img.shields.io/badge/Flask-000000?style=flat-square&logo=flask&logoColor=white" alt="Flask"> <img src="https://img.shields.io/badge/SQLAlchemy-D71F00?style=flat-square&logo=sqlalchemy&logoColor=white" alt="SQLAlchemy"> <img src="https://img.shields.io/badge/PostgreSQL-4169E1?style=flat-square&logo=postgresql&logoColor=white" alt="PostgreSQL"> <img src="https://img.shields.io/badge/SQLite-003B57?style=flat-square&logo=sqlite&logoColor=white" alt="SQLite"> <img src="https://img.shields.io/badge/MySQL-4479A1?style=flat-square&logo=mysql&logoColor=white" alt="MySQL"> <img src="https://img.shields.io/badge/Redis-DC382D?style=flat-square&logo=redis&logoColor=white" alt="Redis"> <img src="https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=nodedotjs&logoColor=white" alt="Node.js"> |
 | **Frontend** | <img src="https://img.shields.io/badge/React-20232A?style=flat-square&logo=react&logoColor=61DAFB" alt="React"> <img src="https://img.shields.io/badge/Vite-646CFF?style=flat-square&logo=vite&logoColor=white" alt="Vite"> <img src="https://img.shields.io/badge/Three.js-000000?style=flat-square&logo=threedotjs&logoColor=white" alt="Three.js"> <img src="https://img.shields.io/badge/Tailwind_CSS-06B6D4?style=flat-square&logo=tailwindcss&logoColor=white" alt="Tailwind CSS"> <img src="https://img.shields.io/badge/Chart.js-FF6384?style=flat-square&logo=chartdotjs&logoColor=white" alt="Chart.js"> <img src="https://img.shields.io/badge/Streamlit-FF4B4B?style=flat-square&logo=streamlit&logoColor=white" alt="Streamlit"> <br><sub>Browser extensions (Manifest V3) · Tkinter desktop apps</sub> |
-| **AI & ML** | <img src="https://img.shields.io/badge/PyTorch-EE4C2C?style=flat-square&logo=pytorch&logoColor=white" alt="PyTorch"> <img src="https://img.shields.io/badge/ONNX-005CED?style=flat-square&logo=onnx&logoColor=white" alt="ONNX"> <img src="https://img.shields.io/badge/Claude_API-D97757?style=flat-square&logo=anthropic&logoColor=white" alt="Claude API"> <img src="https://img.shields.io/badge/Ollama-000000?style=flat-square&logo=ollama&logoColor=white" alt="Ollama"> <img src="https://img.shields.io/badge/pgvector-336791?style=flat-square&logo=postgresql&logoColor=white" alt="pgvector"> <br><sub>Reinforcement learning (PPO, DAgger) · metaheuristics (CMA-ES, simulated annealing) · multi-agent supervision · RAG and embeddings · LLM agents and tool use · utility AI and A* pathfinding · agent-based crowd simulation and data-oriented design · discrete-event simulation (SimPy) and queueing theory · quantum state-vector simulation</sub> |
+| **AI & ML** | <img src="https://img.shields.io/badge/PyTorch-EE4C2C?style=flat-square&logo=pytorch&logoColor=white" alt="PyTorch"> <img src="https://img.shields.io/badge/ONNX-005CED?style=flat-square&logo=onnx&logoColor=white" alt="ONNX"> <img src="https://img.shields.io/badge/Claude_API-D97757?style=flat-square&logo=anthropic&logoColor=white" alt="Claude API"> <img src="https://img.shields.io/badge/Ollama-000000?style=flat-square&logo=ollama&logoColor=white" alt="Ollama"> <img src="https://img.shields.io/badge/pgvector-336791?style=flat-square&logo=postgresql&logoColor=white" alt="pgvector"> <br><sub>Reinforcement learning (PPO, DAgger) · metaheuristics (CMA-ES, simulated annealing) · multi-agent supervision · speech recognition and natural-language command parsing · RAG and embeddings · LLM agents and tool use · utility AI and A* pathfinding · agent-based crowd simulation and data-oriented design · discrete-event simulation (SimPy) and queueing theory · quantum state-vector simulation</sub> |
 | **Security** | <sub>Applied cryptography (Argon2id, XChaCha20-Poly1305) · steganography and steganalysis · metadata forensics and C2PA verification · fuzzing and sanitizers · Content Security Policy · prompt-injection-aware agent design</sub> |
-| **Tooling & quality** | <img src="https://img.shields.io/badge/Git-F05032?style=flat-square&logo=git&logoColor=white" alt="Git"> <img src="https://img.shields.io/badge/GitHub_Actions-2088FF?style=flat-square&logo=githubactions&logoColor=white" alt="GitHub Actions"> <img src="https://img.shields.io/badge/GitHub_Pages-222222?style=flat-square&logo=githubpages&logoColor=white" alt="GitHub Pages"> <img src="https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white" alt="Docker"> <img src="https://img.shields.io/badge/CMake-064F8C?style=flat-square&logo=cmake&logoColor=white" alt="CMake"> <img src="https://img.shields.io/badge/pytest-0A9EDC?style=flat-square&logo=pytest&logoColor=white" alt="pytest"> <img src="https://img.shields.io/badge/Playwright-2EAD33?style=flat-square&logo=playwright&logoColor=white" alt="Playwright"> <img src="https://img.shields.io/badge/Linux-FCC624?style=flat-square&logo=linux&logoColor=black" alt="Linux"> |
+| **Tooling & quality** | <img src="https://img.shields.io/badge/Git-F05032?style=flat-square&logo=git&logoColor=white" alt="Git"> <img src="https://img.shields.io/badge/GitHub_Actions-2088FF?style=flat-square&logo=githubactions&logoColor=white" alt="GitHub Actions"> <img src="https://img.shields.io/badge/GitHub_Pages-222222?style=flat-square&logo=githubpages&logoColor=white" alt="GitHub Pages"> <img src="https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white" alt="Docker"> <img src="https://img.shields.io/badge/CMake-064F8C?style=flat-square&logo=cmake&logoColor=white" alt="CMake"> <img src="https://img.shields.io/badge/MkDocs-526CFE?style=flat-square&logo=materialformkdocs&logoColor=white" alt="MkDocs"> <img src="https://img.shields.io/badge/pytest-0A9EDC?style=flat-square&logo=pytest&logoColor=white" alt="pytest"> <img src="https://img.shields.io/badge/Playwright-2EAD33?style=flat-square&logo=playwright&logoColor=white" alt="Playwright"> <img src="https://img.shields.io/badge/Linux-FCC624?style=flat-square&logo=linux&logoColor=black" alt="Linux"> |
 
 <sub>Also used in my degree and coursework: C, Java, PHP, Bash, Django, Oracle, Power BI, Tableau and Figma; Azure AI services and Microsoft Defender XDR through Microsoft Learn; and security tools such as Wireshark, Nmap, Burp Suite and Kali Linux.</sub>
 
@@ -333,7 +342,7 @@ Estoy en la recta final de **Ingeniería Informática** en la **Universidad de G
 Las áreas a las que siempre vuelvo son los sistemas backend, la IA aplicada, la seguridad y la optimización, y sobre todo los puntos donde se cruzan. Hay costumbres que se repiten en casi todo lo que hago:
 
 - **Primero escribo el diseño.** Especificación, requisitos y registros de decisiones de arquitectura (ADR) antes del código, sobre todo en [CompanyAgentsHQ](https://github.com/jossseluuu/CompanyAgentsHQ), [NPC Crowd Routines](https://github.com/jossseluuu/NPC-CrowdRoutines) e [I-CPU](https://github.com/jossseluuu/I-CPU).
-- **Quiero cifras, no impresiones.** I-CPU somete su propio resultado a estegoanálisis; cada cambio en los bots de openScope se queda o se descarta tras decenas de partidas de una hora con semilla; NPC Crowd Routines vuelve a reproducir cada partida guardada y la verifica con un checksum, y mide el coste por tick en p50/p95/p99; MetaSleuth se contrastó con cientos de archivos reales antes de su primera versión.
+- **Quiero cifras, no impresiones.** I-CPU somete su propio resultado a estegoanálisis; cada cambio en los bots de openScope tiene que superar 30 partidas de una hora con semilla, y la CI los vuelve a volar cada noche; NPC Crowd Routines vuelve a reproducir cada partida guardada y la verifica con un checksum, y mide el coste por tick en p50/p95/p99; MetaSleuth se contrastó con cientos de archivos reales antes de su primera versión.
 - **La seguridad forma parte del diseño.** Aprobaciones, registros de auditoría, escudos de seguridad y políticas de contenido estrictas están desde el primer commit, no se añaden después.
 - **Me gusta explicar.** Escribo contenido técnico en español y en inglés, buscando que un principiante pueda seguirlo y que un experto no encuentre nada que corregir, y mis herramientas también se explican solas: el README de QuantumZero es un pequeño curso y MetaSleuth trae su propia guía.
 
@@ -341,7 +350,7 @@ Las áreas a las que siempre vuelvo son los sistemas backend, la IA aplicada, la
 
 | | Proyecto | Qué es | Estado |
 |:-:|---|---|---|
-| 🛫 | **[openScope](#es-openscope)** | Tres controladores aéreos con IA que llevan un aeropuerto entero en un simulador ATC de código abierto | 🛠️ Trabajando en ello |
+| 🛫 | **[openScope](#es-openscope)** | Tres controladores aéreos con IA que llevan un aeropuerto entero, más copiloto, órdenes por voz y meteorología viva, en un simulador ATC de código abierto | 🛠️ Trabajando en ello |
 | 🏙️ | **[NPC Crowd Routines](#es-npccrowdroutines)** | Una ciudad de miles de residentes que deciden su propio día, en un motor C++20 determinista | 🛠️ Trabajando en ello |
 | 🔐 | **[I-CPU](#es-i-cpu)** | Esconde datos cifrados en imágenes y después ataca su propio resultado para medir lo detectable que es | ✅ Terminado |
 | 🔎 | **[MetaSleuth](#es-metasleuth)** | Muestra, verifica y limpia los metadatos ocultos de cualquier archivo, sin conexión | ✅ Terminado |
@@ -357,25 +366,34 @@ Las áreas a las que siempre vuelvo son los sistemas backend, la IA aplicada, la
 
 #### 🛫 openScope · Controladores aéreos con IA
 
-<sub>**JavaScript · Python · PyTorch · ONNX** · fork de [openscope/openscope](https://github.com/openscope/openscope): los bots, la capa de realismo, el simulador sin navegador y los dos aeropuertos nuevos son míos</sub>
+<sub>**JavaScript · Python · PyTorch · ONNX** · fork de [openscope/openscope](https://github.com/openscope/openscope): los bots, el copiloto, las capas de realismo y seguridad, la meteorología, el control por voz, el simulador sin navegador y ocho aeropuertos son míos</sub>
 
-Bots que hacen de controlador de todo un aeropuerto, desde la primera llegada hasta la última salida, usando **solo las órdenes que tiene un controlador humano** y con las normas reales de separación de OACI, EASA y FAA. Los tres comparten un mismo escudo de seguridad y un reglamento ordenado como *seguridad → separación → procedimiento → eficiencia*.
+Bots que hacen de controlador de todo un aeropuerto, desde la primera llegada hasta la última salida, usando **solo las órdenes que tiene un controlador humano** y con las normas reales de separación de OACI, EASA y FAA. Los tres ven lo mismo, eligen entre las mismas 66 acciones, pasan por un mismo escudo de seguridad y los puntúa un único reglamento ordenado como *seguridad → separación → procedimiento → eficiencia*.
+
+**Tres bots, tres formas de pensar**
 
 | Bot | Cómo controla el aeropuerto | En qué punto está |
 |---|---|---|
-| **A · El experto** | Reglas escritas a mano y algoritmos de planificación. Cada 5 segundos predice los conflictos a dos minutos vista y comprueba que cada solución funciona antes de darla, ordena las llegadas con recocido simulado y elige el mejor punto para unirse al ILS. Cada orden lleva su motivo. | En vuelo, con 0 colisiones en 30 partidas de una hora |
-| **B · El aprendiz** | Una pequeña red *transformer* (unos 480.000 parámetros) que primero copia 40.000 decisiones del Bot A y después mejora por su cuenta con aprendizaje por refuerzo (PPO), de poco tráfico a tráfico completo con viento y emergencias. Se exporta a ONNX para funcionar en el navegador. | El entrenamiento está listo; falta entrenar el modelo |
-| **C · El equipo** | Seis agentes especialistas (coordinador, entradas, ILS, torre, salidas y separación), cada uno con permiso solo para su tipo de orden. Supervisores independientes califican cada instrucción como *buena*, *dudosa* o *mala* y averiguan la causa de cada incidente. | En vuelo, con 0 colisiones y más de 40.000 órdenes auditadas |
+| **A · El experto** | Reglas escritas a mano y algoritmos de planificación. Cada 5 segundos predice los conflictos a dos minutos vista y comprueba que cada solución funciona (y no crea un conflicto nuevo) antes de darla, ordena las llegadas con recocido simulado y elige el mejor punto para unirse al ILS según el terreno de la trayectoria. Cada orden lleva su motivo. | En vuelo · 494 aterrizajes y 539 despegues en 30 partidas de una hora |
+| **B · El aprendiz** | Una pequeña red *transformer* (unos 480.000 parámetros) que primero copia las decisiones del Bot A y después mejora por su cuenta con aprendizaje por refuerzo (PPO), de poco tráfico a tráfico completo con viento y emergencias. Preparado para exportarse a ONNX y funcionar en el navegador. | Entrenando · ya aterriza el 55 % de lo que aterriza el Bot A; necesita el 80 % para pasar a PPO |
+| **C · El equipo** | Seis agentes especialistas (coordinador, entradas, ILS, torre, salidas y separación), cada uno con permiso solo para su tipo de orden. Supervisores independientes califican cada instrucción como *buena*, *dudosa* o *mala* y averiguan la causa de cada incidente. | En vuelo · 0 colisiones y más de 40.000 órdenes auditadas |
 
-- **Realista donde importa:** estela turbulenta, aproximaciones paralelas, terreno y altitudes mínimas de vectores, emergencias 7700 y despegues abortados con V1.
-- **Dos aeropuertos españoles nuevos:** Madrid-Barajas y Málaga, hechos a partir del AIP España.
-- **Medido, no a ojo:** un simulador sin navegador va más rápido que el tiempo real y funciona como entorno Gymnasium desde Python, así que cada cambio se juzga con muchas partidas con semilla.
+**No solo para bots: lo que cambia para quien juega**
 
-**El Bot A en cifras** (30 partidas de una hora en cinco configuraciones de aeropuerto): `0 colisiones` · `~16 aterrizajes/h` · `~18 despegues/h` · `−81 % de pérdidas de separación en un mes`
+- 🛡️ **Redes de seguridad como las reales:** el STCA avisa al controlador con dos minutos de margen, el TCAS II da avisos coordinados de ascenso o descenso que los pilotos vuelan de verdad, y el MSAW y el APW avisan del terreno y de las zonas restringidas.
+- 🌦️ **Meteorología viva:** viento que cambia y racheado, cambios de pista cuando se sale de límites, niebla con procedimientos de baja visibilidad y tormentas que los pilotos piden esquivar. Escribe `metar` para consultarla.
+- 🧑‍✈️ **Un copiloto:** te avisa, te sugiere órdenes con su motivo (F4 para aceptar) o se encarga de un avión concreto o de un sector entero, por ejemplo con `delegate tower`.
+- 🎙️ **Háblale:** mantén F2 y da instrucciones con fraseología ATC real, en español o en inglés; te propone el comando y espera a que lo confirmes.
 
-> 🛠️ **Trabajando en ello.** Lo siguiente: entrenar al Bot B, convertir a los agentes del Bot C en programas del todo independientes y cerrar las últimas pérdidas de separación.
+**Ocho aeropuertos hechos a partir de las cartas oficiales:** Madrid, Málaga, Palma, Barcelona y Bilbao desde el AIP España, París-Charles de Gaulle desde el francés, y Ámsterdam y Singapur rehechos desde cero. El espacio aéreo, las SID, las STAR, el terreno y el tráfico salen de los datos AIRAC reales, leídos con herramientas propias en Python.
 
-▶️ **[Juégalo en el navegador](https://jossseluuu.github.io/openScope/)** (escribe `bot a` o `bot c`) &nbsp;·&nbsp; 📂 **[Ver el repo](https://github.com/jossseluuu/openScope)**
+**Hecho como un proyecto real:** un simulador determinista que va más rápido que el tiempo real y funciona como entorno Gymnasium desde Python; un protocolo fijo de 30 partidas que debe superar cada cambio; una tarea nocturna de CI que vuelve a volar los bots y abre una issue si empeoran; un validador de aeropuertos; registros de decisiones de arquitectura; y documentación escrita como código.
+
+**El Bot A en cifras** (30 partidas de una hora en cinco configuraciones de aeropuerto): `~16 aterrizajes/h` · `~18 despegues/h` · `~1,4 pérdidas de separación/h` · `−81 % de pérdidas de separación en un mes`
+
+> 🛠️ **Trabajando en ello.** Lo siguiente: reentrenar al Bot B para que también vea la meteorología y las alertas de las redes de seguridad, probar en vuelo los aeropuertos nuevos y añadir Ginebra, Hong Kong, Osaka y Sídney, y convertir a los agentes del Bot C en programas del todo independientes.
+
+▶️ **[Juégalo en el navegador](https://jossseluuu.github.io/openScope/)** (escribe `bot a`, `bot c` o `copilot suggest`) &nbsp;·&nbsp; 📚 **[Leer la documentación](https://github.com/jossseluuu/openScope/tree/main/docs)** &nbsp;·&nbsp; 📂 **[Ver el repo](https://github.com/jossseluuu/openScope)**
 
 <a id="es-npccrowdroutines"></a>
 
